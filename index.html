@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pathfinder Random Character Generator</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
@@ -33,48 +34,54 @@
     <div class="row">
       <div class="large-6 medium-6 columns">
         <div class="panel">
-          <h5>Race: </h5> <span id="data-race"></span>
+          <h5 class="display-inline">Race: </h5> <span id="data-race"></span>
         </div>
       </div>
       <div class="large-6 medium-6 columns">
         <div class="panel">
-          <h5>Class: </h5> <span id="data-class"></span>
+          <h5 class="display-inline">Class: </h5> <span id="data-class"></span>
         </div>
       </div>
     </div>
     
     <div class="row">
-      <div class="large-6 columns">
+      <div class="large-12 columns">
         <div class="row">
           <div class="columns">
             <div class="panel">
               <h4>Attributes</h4>
               <div class="row">
                 <div class="large-6 medium-6 columns">
-                  <h5>Hit Point: </h5><span id="data-hp"></span>
+                  <h5 class="display-inline">Hit Point: </h5><span id="data-hp"></span>
                 </div>
                 <div class="large-6 medium-6 columns">
-                  <h5>Armor Class: </h5><span id="data-armorclass"></span>
+                  <h5 class="display-inline">Armor Class: </h5><span id="data-armorclass"></span>
                 </div>
               </div>
               <div class="row">
-                <div class="large-2 medium-2 small-6 columns">
-                  <h5>STR: </h5><span id="data-str"></span>
+                <div class="large-4 medium-6 columns">
+                  <h5 class="display-inline">STR: </h5>
+                  <span id="data-str-score">?</span> (score) + <span id="data-str-mod">?</span> (mod)
                 </div>
-                <div class="large-2 medium-2 small-6 columns">
-                  <h5>DEX: </h5><span id="data-dex"></span>
+                <div class="large-4 medium-6 columns">
+                  <h5 class="display-inline">DEX: </h5>
+                  <span id="data-dex-score">?</span> (score) + <span id="data-dex-mod">?</span> (mod)
                 </div>
-                <div class="large-2 medium-2 small-6 columns">
-                  <h5>CON: </h5><span id="data-con"></span>
+                <div class="large-4 medium-6 columns">
+                  <h5 class="display-inline">CON: </h5>
+                  <span id="data-con-score">?</span> (score) + <span id="data-con-mod">?</span> (mod)
                 </div>
-                <div class="large-2 medium-2 small-6 columns">
-                  <h5>INT: </h5><span id="data-int"></span>
+                <div class="large-4 medium-6 columns">
+                  <h5 class="display-inline">INT: </h5>
+                  <span id="data-int-score">?</span> (score) + <span id="data-int-mod">?</span> (mod)
                 </div>
-                <div class="large-2 medium-2 small-6 columns">
-                  <h5>WIS: </h5><span id="data-wis"></span>
+                <div class="large-4 medium-6 columns">
+                  <h5 class="display-inline">WIS: </h5>
+                  <span id="data-wis-score">?</span> (score) + <span id="data-wis-mod">?</span> (mod)
                 </div>
-                <div class="large-2 medium-2 small-6 columns">
-                  <h5>CHA: </h5><span id="data-cha"></span>
+                <div class="large-4 medium-6 columns">
+                  <h5 class="display-inline">CHA: </h5>
+                  <span id="data-cha-score">?</span> (score) + <span id="data-cha-mod">?</span> (mod)
                 </div>
               </div>
             </div>
