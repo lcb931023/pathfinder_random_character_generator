@@ -366,7 +366,12 @@ Full-Width Styles
   background: #212121;
 }
 
-
+#btn_generate {
+  background: #D3D3D3;
+  border-style: solid;
+  border-color: #C4C4C4;
+  border-width: 3px;
+}
 
 /*******************************************************************************
 Small Device Styles
