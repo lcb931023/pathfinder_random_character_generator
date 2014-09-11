@@ -9,3 +9,9 @@ $( document ).ready(function() {
   });
   
 });
+
+//race 
+//class
+//ability
+//skills
+//feets
