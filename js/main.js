@@ -13,7 +13,7 @@ $( document ).ready(function() {
 });
 
 function generateChar() {
-  $.getJSON("../json/races.json", function(json) {
+  $.getJSON("./json/races.json", function(json) {
     testVar = json.races; // debugging
     console.log(testVar);
     // [TODO] make these attributes into a "character" object that carries them.
