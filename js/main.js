@@ -13,5 +13,6 @@ $( document ).ready(function() {
 //race 
 //class
 //ability
+  //HP, armor class, and the six attrs
 //skills
 //feets
