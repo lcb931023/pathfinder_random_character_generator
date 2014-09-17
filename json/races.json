@@ -1,4 +1,12 @@
 {"races": [
+
+
+
+
+
+
+
+
   { "name": "Dwarf",
     "names": {
         "male": ["Dolgrin", "Grunyar", "Harsk", "Kazmuk", "Morgrym", "Rogar" ],
@@ -117,6 +125,35 @@
     ],
     "racialprestigeclasses": []
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   { "name": "Elf",
     "names": {
         "male": ["Caladrel", "Heldalel", "Lanliss", "Meirdrarel", "Seldlon", "Talathel", "Variel", "Zordlon" ],
@@ -217,9 +254,35 @@
     "racialprestigeclasses": ["Brightness Seeker"]
   },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   { "name": "Gnome",
     "names": {
-        "male": ["Abroshtor", "Bastargre", "Halungalom", "Krolmnite", "Poshment", "Zarzuket", "Zatqualmie." ],
+        "male": ["Abroshtor", "Bastargre", "Halungalom", "Krolmnite", "Poshment", "Zarzuket", "Zatqualmie" ],
         "female": ["Besh", "Fijit", "Lini", "Majet", "Neji", "Pai", "Queck", "Trig" ]
     },
     "age":{
@@ -319,6 +382,545 @@
         "Groundling",
         "Tantrum",
         "Vast Hatred"
+    ],
+    "racialprestigeclasses": []
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  { "name": "Half-Elf",
+    "names": {
+        "male": ["Calathes", "Encinal", "Iradli", "Kyras", "Narciso", "Quinray", "Seltyiel", "Zirul" ],
+        "female": ["Cathran", "Elsbeth", "Iandoli", "Kieyanna", "Lialda", "Maddela", "Reda", "Tamarie" ]
+    },
+    "age":{
+       "adulthood": 20,
+       "intuitive": "+1d6",
+       "selftaught": "+2d6",
+       "trained": "+3d6"
+    },
+    "height":{
+        "malebase": 62,
+        "malemod": "+2d8",
+        "femalebase": 60,
+        "femalemod": "+2d8"
+    },
+    "weight":{
+        "malebase": 100,
+        "malemod": "+2d8*5",
+        "femalebase": 90,
+        "femalemod": "+2d8*5"
+    },
+
+    "ability":[{"any":2}],
+    "size": "Medium Humanoid (human, elf)",
+    "speed": "30ft",
+    "languages": ["Common", "Elven"],
+    "intlanguages" : ["any"],
+    "traits": [
+        {"Elven Immunities": "Half-elves are immune to magic sleep effects and gain a +2 racial saving throw bonus against enchantment spells and effects."},
+        {"Adaptability": "Half-elves receive Skill Focus as a bonus feat at 1st level."},
+        {"Keen Senses": "Half-elves receive a +2 racial bonus on Perception checks."},
+        {"Low-Light Vision": "Half-elves can see twice as far as humans in conditions of dim light."},
+        {"Elf Blood": "Half-elves count as both elves and humans for any effect related to race."},
+        {"Multitalented": "Half-elves choose two favored classes at first level and gain +1 hit point or +1 skill point whenever they take a level in either one of those classes."}
+    ],
+    "alternatetraits": [
+        {"Ancestral Arms": "Some half-elves receive training in an unusual weapon. Half-elves with this racial trait receive Exotic Weapon Proficiency or Martial Weapon Proficiency with one weapon as a bonus feat at 1st level. This racial trait replaces the adaptability racial trait."},
+        {"Arcane Training": "Half-elves occasionally seek tutoring to help them master the magic in their blood. Half-elves with this racial trait have only one favored class, and it must be an arcane spellcasting class. They can use spell trigger and spell completion items for their favored class as if one level higher (or as a 1st-level character if they have no levels in that class). This racial trait replaces the multitalented racial trait."},
+        {"Child of the Sea": "(from Coastal Regions) [BOG] Half-Elves from a coastal region with this racial trait gain a +4 racial bonus on Swim checks as well as on Profession (sailor) and Wisdom checks to pilot a sea vessel. They also have an innate sense of direction and can never get lost at sea. This racial trait replaces the low-light vision and keen senses racial traits."},
+        {"Cold-Honed": "(from Arctic Region) [BOG] Half-Elves from arctic regions with this racial trait can move through natural snow and ice at their normal speed and gain a +4 racial bonus on Fortitude saves to avoid nonlethal damage from cold environments. This racial trait replaces the elven immunities racial trait."},
+        {"Drow-Blooded": "Some half-elves born of drow parents exhibit more drow traits than others—particularly many of the physical features of the drow—and have darkvision 60 feet and light blindness. This racial trait replaces the low-light vision racial trait."},
+        {"Drow Magic": "A few half-elves with drow ancestry exhibit the innate magic of that race. Half-elves with this trait have drow blood somewhere in their background, and can cast dancing lights, darkness, and faerie fire each once per day, using the half-elf's character level as the caster level for these spell-like abilities. This racial trait replaces the adaptability and multitalented racial traits."},
+        {"Dual Minded": "The mixed ancestry of some half-elves makes them resistant to mental attacks. Half-elves with this racial trait gain a +2 bonus on all Will saving throws. This racial trait replaces the adaptability racial trait."},
+        {"Integrated": "Many half-elves are skilled in the art of ingratiating themselves into a community as if they were natives. Half-elves with this racial trait gain a +1 bonus on Bluff, Disguise, and Knowledge (local) checks. This racial trait replaces the adaptability racial trait."},
+        {"Jungle Affinity": "(from a Jungle) [BOG] Half-Elves from a jungle with this racial trait gain a +4 racial bonus on Stealth checks while within jungle terrain, and can move through natural difficult terrain at their normal speed while within jungle. This racial trait replaces the multi-talented racial trait."},
+        {"Mordant Envoy": "(from Mountainous Terrain) [BOG] Half-Elves from mountainous regions add +1 to the caster level of any transmutation spells they cast. Spireborn with a Charisma score of 11 or higher also gain the following spell-like abilities: 1/day—comprehend languages, detect secret doors, erase, read magic. The caster level for these effects is equal to the user's character level. This racial trait replaces the adaptability racial trait."},
+        {"Sociable": "Half-elves are skilled at charming others and recovering from faux pas. If half-elves with this racial trait attempt to change a creature's attitude with a Diplomacy check and fail by 5 or more, they can try to influence the creature a second time even if 24 hours have not passed. This racial trait replaces the adaptability racial trait."},
+        {"Thinblood Resilience": "(from the Underdark) [BOG] Half-Elves from the underdark with this racial trait are accustomed to torture at the hands of their drow forebears, and gain a +2 racial bonus on Fortitude saves against poison and disease, including magical diseases. Darkborn also gain the poison use ability and never risk accidentally poisoning themselves. This racial trait replaces the elven immunities racial trait."},
+        {"Wary": "Many half-elves have spent their long lives moving from place to place, often driven out by the hostility of others. Such experiences have made them wary of others' motivations. Half-elves with this trait gain a +1 racial bonus on Sense Motive and Bluff checks. This racial trait replaces the keen senses racial trait."},
+        {"Water Child": "Some half-elves are born of elves adapted to life on or near the water. These half-elves gain a +4 racial bonus on Swim checks, can always take 10 while swimming, and may choose Aquan as a bonus language. This racial trait replaces the adaptability and multitalented racial traits."}
+    ],
+    "favoredclassoptions": [
+        {"Alchemist": "Add +1 foot to the range increment of the alchemist's thrown splash weapons (including the alchemist's bombs). This option has no effect unless the alchemist has selected it 5 times (or another increment of 5); a range increment of 24 feet is effectively the same as a range increment of 20 feet, for example."},
+        {"Arcanist": "When casting arcanist enchantment spells, add 1/3 to the effective caster level, but only for the purpose of determining duration."},
+        {"Barbarian": "Add +1/4 to the bonus on Reflex saves and dodge bonus to AC against attacks made by traps granted by trap sense."},
+        {"Bard": "Add +1 to the bard's total number of bardic performance rounds per day."},
+        {"Bloodrager": "Increase the bonus gained from blood sanctuary by 1/4."},
+        {"Brawler": "Add 1 to the brawler's CMD when she's resisting a trip or overrun combat maneuver."},
+        {"Cavalier": "Add +1 foot to the cavalier's mount's base speed. This option has no effect unless the cavalier has selected it 5 times (or another increment of 5); a speed of 54 feet is effectively a speed of 50 feet, for example. If the cavalier ever replaces his mount, the new companion gains this base speed bonus."},
+        {"Cleric": "Add +1/3 to the amount of damage dealt or damage healed when the cleric uses channel energy."},
+        {"Druid": "Select one cleric domain power at 1st level that is normally usable a number of times per day equal to 3 + the druid's Wisdom modifier. The druid adds +1/2 to the number of uses per day of that domain power. For druids whose nature bond gives them an animal companion, add +1 skill rank to the animal companion. If the druid ever replaces her animal companion, the new companion gains these bonus skill ranks."},
+        {"Fighter": "Add +1 to the fighter's CMD when resisting a disarm or overrun combat maneuver."},
+        {"Gunslinger": "Add +1/4 to the number of grit points in the gunslinger's grit pool."},
+        {"Hunter": "Add 1 foot to the hunter's companion's base speed. In combat, this has an effect only for every five increases in base speed."},
+        {"Inquisitor": "Add +1/4 to the number of times per day the inquisitor can change her most recent teamwork feat."},
+        {"Investigator": "Gain a +1/4 bonus on all inspiration rolls."},
+        {"Magus": "Add +1/4 to the magus's arcane pool."},
+        {"Monk": "Add +1/2 on Escape Artist checks and on Acrobatics checks to cross narrow surfaces."},
+        {"Oracle": "Add one spell known from the oracle spell list. This spell must be at least one level below the highest spell level the oracle can cast."},
+        {"Paladin": "Add +1 foot to the size of all the paladin's aura class features. This option has no effect unless the paladin has selected it 5 times (or another increment of 5); an aura of 14 feet is effectively the same as a 10-foot aura, for example."},
+        {"Ranger": "Add +1 skill rank to the ranger's animal companion. If the ranger ever replaces his companion, the new companion gains these bonus skill ranks."},
+        {"Rogue": "Add a +1/2 bonus on Bluff checks to feint and Diplomacy checks to gather information."},
+        {"Shaman": "Add one spell from the cleric spell list that isn't on the shaman spell list to the list of spells the shaman knows. This spell must be at least 1 level below the highest spell level the shaman can cast."},
+        {"Skald": "Increase the skald's total number of raging song rounds per day by 1."},
+        {"Slayer": "Gain a +1/2 bonus on Bluff checks to feint and Diplomacy checks to gain information."},
+        {"Sorcerer": "Select one bloodline power at 1st level that is normally usable a number of times per day equal to 3 + the sorcerer's Charisma modifier. The sorcerer adds +1/2 to the number of uses per day of that bloodline power."},
+        {"Summoner": "Add +1/4 to the eidolon's evolution pool."},
+        {"Swashbuckler": "Increase the number of times per day the swashbuckler can use charmed life by 1/4."},
+        {"Warpriest": "Gain a +1/3 bonus on the damage dealt or healed with the warpriest's channel energy ability."},
+        {"Witch": "Add one spell from the witch spell list to the witch's familiar. This spell must be at least one level below the highest spell level she can cast. If the witch ever replaces her familiar, the new familiar knows these bonus spells."},
+        {"Wizard": "When casting wizard enchantment spells, add +1/3 to the effective caster level of the spell, but only to determine the spell's duration."}
+    ],
+    "bonusfeats": [],
+    "spelllikeabilities": [],
+    "racialfeats":[
+        "Arcane Talent",
+        "Discerning Eye",
+        "Elven Spirit",
+        "Exile's Path",
+        "Half-Drow Paragon",
+        "Human Spirit",
+        "Leaf Singer",
+        "Multitalented Mastery",
+        "Neither Elf Nor Human",
+        "Pass for Human",
+        "Seen and Unseen",
+        "Shared Insight",
+        "Shared Manipulation",
+        "Sociable"
+    ],
+    "racialprestigeclasses": []
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  { "name": "Halfling",
+    "names": {
+        "male": ["Antal", "Boram", "Hyrgan", "Jamir", "Lem", "Miro", "Sumak", "Tribin", "Uldar", "Vraxim" ],
+        "female": ["Anafa", "Bellis", "Etune", "Filiu", "Irlana", "Marra", "Pressi", "Rilka", "Sistra", "Wyssal", "Yamyra" ]
+    },
+    "age":{
+       "adulthood": 20,
+       "intuitive": "+2d4",
+       "selftaught": "+3d6",
+       "trained": "+4d6"
+    },
+    "height":{
+        "malebase": 32,
+        "malemod": "+2d4",
+        "femalebase": 30,
+        "femalemod": "+2d4"
+    },
+    "weight":{
+        "malebase": 30,
+        "malemod": "+2d4",
+        "femalebase": 25,
+        "femalemod": "+2d4"
+    },
+
+    "ability":[{"dex":2}, {"cha":2}, {"str":-2}],
+    "size": "Small Humanoid (halfling)",
+    "speed": "20ft",
+    "languages": ["Common", "Halfling"],
+    "intlanguages": ["Dwarven", "Elven", "Gnome", "Goblin"],
+    "traits": [
+        {"Fearless": "Halflings receive a +2 racial bonus on all saving throws against fear. This bonus stacks with the bonus granted by halfling luck."},
+        {"Halfling Luck": "Halflings receive a +1 racial bonus on all saving throws."},
+        {"Sure-Footed": "Halflings receive a +2 racial bonus on Acrobatics and Climb checks."},
+        {"Weapon Familiarity": "Halflings are proficient with slings and treat any weapon with the word “halfling” in its name as a martial weapon."},
+        {"Keen Senses": "Halflings receive a +2 racial bonus on Perception checks."}
+    ],
+    "alternatetraits": [
+        {"Adaptable Luck": "Some halflings have greater control over their innate luck. This ability gives them more options for how they can apply their good fortune from day to day, but also narrows its scope. Three times per day, a halfling can gain a +2 luck bonus on an ability check, attack roll, saving throw, or skill check. If halflings choose to use the ability before they make the roll or check, they gain the full +2 bonus; if they choose to do so afterward, they only gain a +1 bonus. Using adaptive luck in this way is not an action. This racial trait replaces halfling luck."},
+        {"Craven": "While most halflings are fearless, some are skittish, making them particularly alert. Halflings with this racial trait gain a +1 bonus on initiative checks and a +1 bonus on attack rolls when flanking. They take a –2 penalty on saves against fear effects and gain no benefit from morale bonuses on such saves. When affected by a fear effect, their base speed increases by 10 feet and they gain a +1 dodge bonus to Armor Class. This racial trait replaces fearless and halfling luck."},
+        {"Fleet of Foot": "Some halflings are quicker than their kin but less cautious. Halflings with this racial trait move at normal speed and have a base speed of 30 feet. This racial trait replaces slow speed and sure-footed."},
+        {"Halfling Jinx": "Halflings with this racial trait gain the ability to curse another creature with bad luck at will as a standard action. This curse has a range of 30 feet, and you must be able to see the target and have line of effect to it. The target gets a Will saving throw to resist this jinx (DC = 10 + 1/2 your level + your Charisma modifier). If your target makes this saving throw, it is immune to your jinx ability for 24 hours. A jinxed creature takes a –1 penalty on all saving throws. This jinx lasts for 24 hours or until you attempt to use your jinx again. A jinx is a supernatural ability, is not mind-affecting, does not allow spell resistance, and can affect any kind of creature not immune to luck effects. This replaces halfling luck."},
+        {"Ingratiating": "Halflings often survive at the whims of larger, more aggressive races. Because of this, they go out of their way to make themselves more useful, or at least entertaining, to larger folk. Halflings with this racial trait gain a +2 bonus on skill checks for a single Perform skill of their choice, and Perform is always a class skill for them. They also gain a +2 bonus on Craft and Profession checks. This racial trait replaces keen senses and sure-footed."},
+        {"Low Blow": "Some halflings train extensively in the art of attacking larger creatures. Halflings with this racial trait gain a +1 bonus on critical confirmation rolls against opponents larger than themselves. This racial trait replaces keen senses."},
+        {"Outrider": "Some halflings specialize in mounted combat. Halflings with this racial trait gain a +2 bonus on Handle Animal and Ride checks. This racial trait replaces sure-footed."},
+        {"Polyglot": "Some halflings, especially those who spend a lot of time traveling, develop a talent for learning new languages. These halflings gain a +2 racial bonus on Linguistics checks, and it is always a class skill for them. Halflings with this racial trait also begin play with the ability to speak Common, Halfling, and any one other language of their choice (except for secret languages, such as Druidic) in addition to bonus languages due to high Intelligence. They still gain the normal list of halfling bonus languages. This racial trait replaces keen senses and alters the halfling language racial trait."},
+        {"Practicality": "Halflings value hard work and common sense. Halflings with this racial trait gain a +2 bonus on any one Craft or Profession skill, as well as on Sense Motive checks and saves against illusions. This racial trait replaces fearless and sure-footed."},
+        {"Shiftless": "Halflings have a reputation for larceny and guile—and sometimes it's well deserved. Halflings with this racial trait gain a +2 racial bonus on Bluff and Sleight of Hand checks, and Sleight of Hand is always a class skill for them. This racial trait replaces sure-footed."},
+        {"Swift": "as Shadows Halflings possess incredible stealth even while moving through obstructed areas. Halflings with this racial trait reduce the penalty for using Stealth while moving by 5, and reduce the Stealth check penalty for sniping by 10. This racial trait replaces sure-footed."},
+        {"Underfoot": "Halflings must train hard to effectively fight bigger opponents. Halflings with this racial trait gain a +1 dodge bonus to AC against foes larger than themselves and a +1 bonus on Reflex saving throws to avoid trample attacks. This racial trait replaces halfling luck."},
+        {"Wanderlust": "Halflings love travel and maps. Halflings with this racial trait receive a +2 bonus on Knowledge (geography) and Survival checks. When casting spells or using abilities that provide or enhance movement, halflings treat their caster level as +1 higher than normal. This racial trait replaces fearless and halfling luck."},
+        {"Warslinger": "Halflings are experts at the use of the sling. Halflings with this racial trait can reload a sling as a free action. Reloading a sling still requires two hands and provokes attacks of opportunity. This racial trait replaces sure-footed."}
+    ],
+    "favoredclassoptions": [
+        {"Alchemist": "Add one extract formula from the alchemist's list to the alchemist's formula book. This formula must be at least one level below the highest formula level the alchemist can create."},
+        {"Arcanist": "Gain 1/6 of a new arcanist exploit."},
+        {"Barbarian": "Add a +1/2 bonus to trap sense or +1/3 to the bonus from the surprise accuracy rage power."},
+        {"Bard": "Add +1/2 on Bluff checks to pass secret messages, +1/2 on Diplomacy checks to gather information, and +1/2 on Disguise checks to appear as an elven, half-elven, or human child."},
+        {"Bloodrager": "Gain a +1/4 dodge bonus to AC while bloodraging against creatures at least one size category larger than the bloodrager."},
+        {"Brawler": "Gain a +1 bonus to the brawler's CMD when resisting a grapple or overrun combat maneuver."},
+        {"Cavalier": "Add +1/2 to the cavalier's effective class level for the purposes of determining the damage he deals when making an attack of opportunity against a challenged foe."},
+        {"Cleric": "Select one domain power granted at 1st level that is normally usable a number of times per day equal to 3 + the cleric's Wisdom modifier. The cleric adds +1/2 to the number of uses per day of that domain power."},
+        {"Druid": "Add a +1/4 luck bonus on the saving throws of the druid's animal companion."},
+        {"Fighter": "Add +1 to the Fighter's CMD when resisting a trip or grapple attempt."},
+        {"Gunslinger": "Add +1/4 to the dodge bonus to AC granted by the nimble class feature (maximum +2) or +1/4 to the AC bonus gained when using the gunslinger's dodge deed."},
+        {"Hunter": "The hunter's animal companion gains a +1/4 luck bonus on saving throws. If the hunter replaces her animal companion, the new animal companion gains this bonus."},
+        {"Inquisitor": "Add +1/4 to the number of times per day that an inquisitor can change her most recent teamwork feat."},
+        {"Investigator": "Add one extract formula from the investigator's list to his formula book. This formula must be at least 1 formula level below the highest level the investigator can create."},
+        {"Magus": "The magus gains 1/6 of a new magus arcana."},
+        {"Monk": "Add +1 to the monk's CMD when resisting a grapple and +1/2 to the number of stunning attacks he can attempt per day."},
+        {"Oracle": "Add +1/2 to the oracle's level for the purpose of determining the effects of the oracle's curse ability."},
+        {"Paladin": "Add +1/2 hit point to the paladin's lay on hands ability (whether using it to heal or harm)."},
+        {"Ranger": "Add a +1/4 dodge bonus to Armor Class against the ranger's favored enemies."},
+        {"Rogue": "Choose a weapon from the following list: sling, dagger, or any weapon with “halfling” in its name. Add a +1/2 bonus on critical hit confirmation rolls with that weapon (maximum bonus +4). This bonus does not stack with Critical Focus."},
+        {"Shaman": "Add 1/2 to the shaman's effective class level for the purpose of determining her spirit animal's natural armor adjustment, Intelligence, and special abilities."},
+        {"Skald": "Choose a weapon from the following list: dagger, sling, or any weapon with the word 'halfling' in its name. Add a +1/2 bonus on critical hit confirmation rolls with that weapon (maximum bonus +4). This bonus doesn't stack with those gained through Critical Focus and similar effects."},
+        {"Slayer": "Add a +1/4 dodge bonus to Armor Class against the slayer's studied target."},
+        {"Sorcerer": "Select one bloodline power at 1st level that is normally usable a number of times per day equal to 3 + the sorcerer's Charisma modifier. The sorcerer adds +1/2 to the number of uses per day of that bloodline power."},
+        {"Summoner": "Add +1 skill rank to the summoner's eidolon."},
+        {"Swashbuckler": "Increase the number of times the swashbuckler can use charmed life by 1/4."},
+        {"Warpriest": "Add 1/4 to the warpriest's effective level when determining the damage of his sacred weapon."},
+        {"Witch": "Add +1/4 to the witch's caster level when determining the effects of the spells granted to her by her patron."},
+        {"Wizard": "Add +1/2 to the wizard's effective class level for the purposes of determining his familiar's natural armor adjustment, Intelligence, and special abilities."}
+    ],
+    "bonusfeats": [],
+    "spelllikeabilities": [],
+    "racialfeats":[
+        "Adaptive Fortune",
+        "Blundering Defense",
+        "Cautious Fighter",
+        "Childlike",
+        "Courageous Resolve",
+        "Desperate Swing",
+        "Fortunate One",
+        "Halfling Slinger",
+        "Improved Low Blow",
+        "Lucky Halfling",
+        "Lucky Healer",
+        "Lucky Strike",
+        "Pass for Human",
+        "Risky Striker",
+        "Sure and Fleet",
+        "Surprise Strike",
+        "Uncanny Defense",
+        "Well-Prepared"
+    ],
+    "racialprestigeclasses": ["Halfling Opportunist"]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  { "name": "Half-Orc",
+    "names": {
+        "male": ["Ausk", "Davor", "Hakak", "Kizziar", "Makoa", "Nesteruk", "Tsadok" ],
+        "female": ["Canan", "Drogheda", "Goruza", "Mazon", "Shirish", "Tevaga", "Zeljka" ]
+    },
+    "age":{
+       "adulthood": 14,
+       "intuitive": "+1d4",
+       "selftaught": "+1d6",
+       "trained": "+2d6"
+    },
+    "height":{
+        "malebase": 58,
+        "malemod": "+2d12",
+        "femalebase": 53,
+        "femalemod": "+2d12"
+    },
+    "weight":{
+        "malebase": 150,
+        "malemod": "+2d12*7",
+        "femalebase": 110,
+        "femalemod": "+2d12*7"
+    },
+
+    "ability":[{"any":2}],
+    "size": "Medium Humanoid (human, orc)",
+    "speed": "30ft",
+    "languages": ["Common", "Orc"],
+    "intlanguages": ["Abyssal", "Draconic", "Giant", "Gnoll", "Goblin"],
+    "traits": [
+        {"Intimidating": "Half-orcs receive a +2 racial bonus on Intimidate checks due to their fearsome nature."},
+        {"Orc Ferocity": "Once per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for 1 more round as if disabled. At the end of his next turn, unless brought to above 0 hit points, he immediately falls unconscious and begins dying."},
+        {"Weapon Familiarity": "Half-orcs are proficient with greataxes and falchions and treat any weapon with the word “orc” in its name as a martial weapon."},
+        {"Darkvision": "Half-orcs can see in the dark up to 60 feet."},
+        {"Orc Blood": "Half-orcs count as both humans and orcs for any effect related to race."}
+    ],
+    "alternatetraits": [
+        {"Acute Darkvision": "Some half-orcs have exceptionally sharp darkvision, gaining darkvision 90 feet. This racial trait replaces orc ferocity and darkvision."},
+        {"Beastmaster": "Some half-orcs have a spiritual kinship with fantastical beasts, capturing them for sport or living and hunting with them. A half-orc with this trait treats whips and nets as martial weapons and gains a +2 racial bonus on Handle Animal checks. This racial trait replaces orc ferocity."},
+        {"Bestial": "The orc blood of some half-orcs manifests in the form of particularly prominent orc features, exacerbating their bestial appearances but improving their already keen senses. They gain a +2 racial bonus on Perception checks. This racial trait replaces orc ferocity."},
+        {"Burning Assurance": "(from the Desert) [BOG] Half-orcs from desert terrain lack the chip on their shoulder that many others of their kind acquire as a result of prejudice, and their self-confidence puts others at ease. Desert half-orcs with this racial trait gain a +2 racial bonus on Diplomacy checks. This racial trait replaces the intimidating racial trait."},
+        {"Cavewight": "Some half-orcs live far below the surface, seeking freedom in winding cave complexes. Half-orcs with this racial trait gain a +1 racial bonus on Knowledge (dungeoneering) and Survival checks made underground. This racial trait replaces the intimidating racial trait."},
+        {"Chain Fighter": "Some half-orcs have escaped from slavery and reforged the chains of their imprisonment into deadly weapons. Half-orcs with this racial trait are proficient with flails and heavy flails, and treat dire flails and spiked chains as martial weapons. This racial trait replaces weapon familiarity."},
+        {"City-Raised": "Half-orcs with this trait know little of their orc ancestry and were raised among humans and other half-orcs in a large city. City-raised half-orcs are proficient with whips and longswords, and receive a +2 racial bonus on Knowledge (local) checks. This racial trait replaces weapon familiarity."},
+        {"Cliffside Charger": "(from the Mountains) [BOG] Half-orcs from mountainous terrain are accustomed to traveling in the steep terrain of their mountain homes. When in mountain terrain, mountain half-orcs with this racial trait can move through natural difficult terrain at their normal speed; magically altered terrain affects them normally. In addition, cragkin gain a +10 foot racial bonus to their speed while charging. This racial trait replaces the orc ferocity and weapon familiarity racial traits."},
+        {"Evader": "(from the Underdark) [BOG] Having lived all your life at the mercy of savage underworld creatures, you've developed a knack for finding your way about silently in the dark. You gain a +5 racial bonus on Survival checks to avoid becoming lost, and a +1 racial bonus on Stealth checks. This racial trait replaces the intimidating racial trait."},
+        {"Forest Walker": "More at home in the forests and jungles of the world, these half-orcs are well adapted to their surroundings. Half-orcs with this trait have low-light vision and gain a +2 racial bonus on Climb checks. This racial trait replaces darkvision."},
+        {"Gatecrasher": "Many half-orcs revel in acts of wanton destruction. Half-orcs with this racial trait gain a +2 racial bonus on Strength checks to break objects and on sunder combat maneuver checks. This racial trait replaces orc ferocity."},
+        {"Rock Climber": "Half-orcs from mountainous regions are excellent climbers, and sometimes ambush prey by leaping down from above. Half-orcs with this racial trait gain a +1 racial bonus on Acrobatics and Climb checks. This racial trait replaces the intimidating trait."},
+        {"Sacred Tattoo": "Many half-orcs decorate themselves with tattoos, piercings, and ritual scarification, which they consider sacred markings. Half-orcs with this racial trait gain a +1 luck bonus on all saving throws. This racial trait replaces orc ferocity."},
+        {"Scavenger": "Some half-orcs eke out a leaving picking over the garbage heaps of society, and must learn to separate rare finds from the inevitable dross. Half-orcs with this racial trait receive a +2 racial bonus on Appraise checks and on Perception checks to find hidden objects (including traps and secret doors), determine whether food is spoiled, or identify a potion by taste. This racial trait replaces the intimidating trait."},
+        {"Shaman's Apprentice": "Only the most stalwart survive the years of harsh treatment that an apprenticeship to an orc shaman entails. Half-orcs with this trait gain Endurance as a bonus feat. This racial trait replaces the intimidating trait."},
+        {"Skilled": "Second- and third-generation half-orcs often favor their human heritage more than their orc heritage. Half-orcs with this trait gain 1 additional skill rank per level. This racial trait replaces darkvision."},
+        {"Squalid": "Some half-orcs exist in surroundings so filthy and pestilent that even orcs would have difficulty living in them. Halforcs with this racial trait gain a +2 racial bonus on saving throws made to resist nausea, the sickened condition, and disease. This racial trait replaces orc ferocity."},
+        {"Toothy": "Some half-orcs' tusks are large and sharp, granting a bite attack. This is a primary natural attack that deals 1d4 points of piercing damage. This racial trait replaces orc ferocity."},
+        {"Unflinching Valor": "(from cold regions) [BOG] Many fearsome arctic predators consider young frostkin easy prey, but some frostkin manage to surpass their fear and fight off these beasts in time for help to arrive. Winter half-orcs with this racial trait gain a +2 racial bonus on saving throws against fear effects, and a +1 racial bonus to CMD to avoid being grappled. This racial trait replaces the intimidating racial trait."},
+        {"Warded Skin": "(from the Jungle) [BOG] Half-orcs from jungles are often protected by elaborate tattoos that redirect demonic magic. Jungle half-orcs with this racial trait gain spell resistance against divine magic equal to 6 + their level. Additionally, divine spells cast on them by demon worshipers have a 10% chance of failure. This racial trait replaces the orc ferocity racial trait."}
+    ],
+    "favoredclassoptions": [
+        {"Alchemist": "Add +1/2 to the alchemist's bomb damage."},
+        {"Arcanist": "Gain a +1 bonus on concentration checks made due to taking damage while casting arcanist spells."},
+        {"Barbarian": "Add +1 to the barbarian's total number of rage rounds per day."},
+        {"Bard": "Add +1 to the bard's total number of bardic performance rounds per day."},
+        {"Bloodrager": "Increase the bloodrager's total number of bloodrage rounds per day by 1."},
+        {"Brawler": "Add 1/4 to the brawler's effective level to determine her unarmed strike damage."},
+        {"Hunter": "Add 1 hit point to the hunter's animal companion. If the hunter replaces his animal companion, the new animal companion gains these bonus hit points."},
+        {"Cavalier": "Add +1 hit point to the cavalier's mount companion. If the cavalier ever replaces his mount, the new mount gains these bonus hit points."},
+        {"Cleric": "Select one domain power granted at 1st level that is normally usable a number of times per day equal to 3 + the cleric's Wisdom modifier. The cleric adds +1/2 to the number of uses per day of that domain power."},
+        {"Druid": "Add +1/3 to the druid's natural armor bonus when using wild shape."},
+        {"Fighter": "Add a +2 bonus on rolls to stabilize when dying."},
+        {"Gunslinger": "Add a +1/3 bonus on attack rolls when using the pistol whip deed."},
+        {"Hunter": "Add 1 hit point to the hunter's animal companion. If the hunter replaces his animal companion, the new animal companion gains these bonus hit points."},
+        {"Inquisitor": "Add a +1/2 bonus on Intimidate checks and Knowledge checks to identify creatures."},
+        {"Investigator": "Gain a +1/3 bonus on critical hit confirmation rolls made while using studied combat (maximum bonus of +5). This bonus does not stack with those gained through Critical Focus and similar effects."},
+        {"Magus": "Add +1/2 point of fire damage to spells that deal fire damage cast by the magus."},
+        {"Monk": "Add +1 to the monk's CMD when resisting a grapple and +1/2 to the number of stunning attacks he can attempt per day."},
+        {"Oracle": "Add one spell known from the oracle spell list. This spell must be at least one level below the highest spell level the oracle can cast."},
+        {"Paladin": "Add +1/3 on critical hit confirmation rolls made while using smite evil (maximum bonus of +5). This bonus does not stack with Critical Focus."},
+        {"Ranger": "Add +1 hit point to the ranger's animal companion. If the ranger ever replaces his animal companion, the new animal companion gains these bonus hit points."},
+        {"Rogue": "Add +1/3 on critical hit confirmation rolls made while using sneak attack (maximum bonus of +5). This bonus does not stack with Critical Focus."},
+        {"Shaman": "Add one spell from the cleric spell list that isn't on the shaman spell list to the list of spells the shaman knows. This spell must be at least 1 level below the highest spell level the shaman can cast."},
+        {"Skald": "Increase the skald's total number of raging song rounds per day by 1."},
+        {"Slayer": "Gain a +1/3 bonus on critical hit confirmation rolls made while using sneak attack (maximum bonus of +5). This bonus doesn't stack with those gained through Critical Focus and similar effects."},
+        {"Sorcerer": "Add +1/2 point of fire damage to spells that deal fire damage cast by the sorcerer."},
+        {"Summoner": "Add +1 hit point to the summoner's eidolon."},
+        {"Swashbuckler": "Gain a +1/3 bonus on all critical hit confirmation rolls made while using the precise strike deed (maximum bonus of +5). This bonus doesn't stack with those gained through Critical Focus and similar effects."},
+        {"Warpriest": "Gain a +2 bonus on rolls to stabilize when dying."},
+        {"Witch": "Add +1 skill rank to the witch's familiar. If the half-orc ever replaces her familiar, the new familiar gains these bonus skill ranks."},
+        {"Wizard": "Add a +1 bonus on concentration checks made due to taking damage while casting wizard spells."}
+    ],
+    "bonusfeats": [],
+    "spelllikeabilities": [],
+    "racialfeats":[
+        "Beast Rider",
+        "Blood Vengeance",
+        "Brutal Grappler",
+        "Deathless Initiate",
+        "Deathless Master",
+        "Deathless Zealot",
+        "Destroyer's Blessing",
+        "Ferocious Resolve",
+        "Ferocious Summons",
+        "Ferocious Tenacity",
+        "Fight On",
+        "Fire God's Blessing",
+        "Gore Fiend",
+        "Horde Charge",
+        "Ironguts",
+        "Ironhide",
+        "Keen Scent",
+        "Pass for Human",
+        "Razortusk",
+        "Resilient Brute",
+        "Smash",
+        "Smell Fear",
+        "Surprise Follow-Through",
+        "Surprise Follow-Through, Improved",
+        "Sympathetic Rage",
+        "Tenacious Survivor",
+        "Thrill of the Kill",
+        "War Singer"
+    ],
+    "racialprestigeclasses": []
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  { "name": "Human",
+    "names": {
+        "male": ["Alerdene", "Alinza", "Aula", "Bach Hien", "Belka", "Beshkee", "Chammady", "Chao", "Do Quyen", "Eshe", "Eudomia", "Gerda", "Hiriko", "Ilinica", "Indah", "Ingirt", "Izora", "Jalket", "Jayazi", "Kaede", "Kalizama", "Kamshi", "Lestari", "Leyli", "Marisan", "Me'amesa", "Meilin", "Mirelinda", "Mpaandi", "Nalmida", "Nanya", "Narantuyaa", "Ntisi", "Pasara", "Pontia", "Que Xuan", "Revhi", "Runa", "Sahba", "Shirin", "Shivkah", "Sinkitah", "Surenchinua", "Udara", "Umie", "Valki", "Waajida", "Xemne", "Xue", "Zalika", "Zova" ],
+        "female": ["Aakif", "Andrezi", "Arasmes", "Bahram", "Baolo", "Barid", "Batsaikhan", "Belor", "Budi", "Darvan", "Dolok", "Eilif", "Garidan", "Gellius", "Hadzi", "Hamengku", "Harisko", "Iacobus", "Jaali", "Jianguo", "Kjell", "Kousei", "Kronug", "Menas", "Mitabu", "Narsius", "Nonek", "Pateba", "Pratavh", "Qorchi", "Ragnar", "Rubani", "Seckor", "Shokamb", "Shuo", "Sunaki", "Suryo", "Tabansi", "Teruawa", "Thanh Liem", "Toan Hao", "Tomorbataar", "Tuong Kinh", "Ursion", "Vachedi", "Viorec", "Yekskya", "Zaiho", "Zhen" ]
+    },
+    "age":{
+       "adulthood": 15,
+       "intuitive": "+1d4",
+       "selftaught": "+1d6",
+       "trained": "+2d6"
+    },
+    "height":{
+        "malebase": 58,
+        "malemod": "+2d10",
+        "femalebase": 53,
+        "femalemod": "+2d10"
+    },
+    "weight":{
+        "malebase": 120,
+        "malemod": "+2d10*5",
+        "femalebase": 85,
+        "femalemod": "+2d10*5"
+    },
+
+    "ability":[{"any":2}],
+    "size": "Medium Humanoid (human)",
+    "speed": "30ft",
+    "languages": ["Common"],
+    "intlanguages": ["any"],
+    "traits": [
+        {"Bonus Feat": "Humans select one extra feat at 1st level."},
+        {"Skilled": "Humans gain an additional skill rank at first level and one additional rank whenever they gain a level."}
+    ],
+    "alternatetraits": [
+        {"Adoptive Parentage": "Humans are sometimes orphaned and adopted by other races. Choose one humanoid race without the human subtype. You start play with that race's languages and gain that race's weapon familiarity racial trait (if any). If the race does not have weapon familiarity, you gain either Skill Focus or Weapon Focus as a bonus feat that is appropriate for that race instead. This racial trait replaces the bonus feat trait."},
+        {"Dual Talent": "Some humans are uniquely skilled at maximizing their natural gifts. These humans pick two ability scores and gain a +2 racial bonus in each of those scores. This racial trait replaces the +2 bonus to any one ability score, the bonus feat, and the skilled traits."},
+        {"Eye for Talent": "Humans have great intuition for hidden potential. They gain a +2 racial bonus on Sense Motive checks. In addition, when they acquire an animal companion, bonded mount, cohort, or familiar, that creature gains a +2 bonus to one ability score of the character's choice. This racial trait replaces the bonus feat trait."},
+        {"Focused Study": "All humans are skillful, but some, rather than being generalists, tend to specialize in a handful of skills. At 1st, 8th, and 16th level, such humans gain Skill Focus in a skill of their choice as a bonus feat. This racial trait replaces the bonus feat trait."},
+        {"Heart of the Fields": "Humans born in rural areas are used to hard labor. They gain a racial bonus equal to half their character level to any one Craft or Profession skill, and once per day they may ignore an effect that would cause them to become fatigued or exhausted. This racial trait replaces skilled."},
+        {"Heart of the Mountains": "Humans born in the mountains are skilled at negotiating heights and precipices. They gain a +2 racial bonus on Climb checks and Acrobatics checks to move on narrow surfaces and uneven ground. Furthermore, they are considered acclimated to the effects of high altitude. This racial trait replaces skilled."},
+        {"Heart of the Sea": "Humans born near the sea are always drawn to it. They gain a +2 racial bonus on Profession (sailor) and Swim checks, and these are always class skills for them. They can hold their breath twice as long as normal, and spellcasters gain a +4 racial bonus on concentration checks when attempting to cast spells underwater. This racial trait replaces skilled."},
+        {"Heart of the Slums": "Humans who eke out a life in a city's teeming slums must be quick and clever. They gain a +2 racial bonus on Sleight of Hand and Stealth checks, and a +4 racial bonus on Survival checks in urban and underground settings. In addition, they may roll twice when saving against disease, taking the better roll. This racial trait replaces skilled."},
+        {"Heart of the Snows": "Humans born in chilly climes treat cold climates as one category less severe. They gain a +2 racial bonus on Fortitude saving throws against the effects of cold climates, on any check or saving throw to avoid slipping and falling, and to CMD against trip combat maneuvers. This bonus applies on Acrobatics and Climb checks made in slippery conditions. This racial trait replaces skilled."},
+        {"Heart of the Streets": "Humans from bustling cities are skilled with crowds. They gain a +1 racial bonus on Reflex saves and a +1 dodge bonus to Armor Class when adjacent to at least two other allies. Crowds do not count as difficult terrain for them. This racial trait replaces skilled."},
+        {"Heart of the Sun": "Humans born in tropical climates treat hot climates as one category less severe. They also gain a +2 racial bonus on Fortitude saving throws against the effects of a hot climate, as well as against the poison and distraction ability of swarms and vermin. This racial trait replaces skilled."},
+        {"Heart of the Wilderness": "Humans raised in the wild learn the hard way that only the strong survive. They gain a racial bonus equal to half their character level on Survival checks. They also gain a +5 racial bonus on Constitution checks to stabilize when dying and add half their character level to their Constitution score when determining the negative hit point total necessary to kill them. This racial trait replaces skilled."},
+        {"Heroic": "Some humans are born heroes. In campaigns that use the optional hero point system, each time these humans gain a level, they gain 2 hero points instead of 1. If they take the Blood of Heroes feat, they gain 3 hero points each level instead of 2. This racial trait replaces the bonus feat trait."},
+        {"Mixed Heritage": "Often human civilization is defined by more than one characteristic. A human with this trait may select a second “Heart of the” racial trait. This replaces the bonus feat racial trait."},
+        {"Silver Tongued": "Human are often adept at subtle manipulation and putting even sworn foes at ease. Humans with this trait gain a +2 bonus on Diplomacy and Bluff checks. In addition, when they use Diplomacy to shift a creature's attitude, they can shift up to three steps up rather than just two. This racial trait replaces skilled."}
+    ],
+    "favoredclassoptions": [
+        {"Alchemist": "Add one extract formula from the alchemist formula list to the character's formula book. This formula must be at least one level below the highest formula level the alchemist can create."},
+        {"Arcanist": "Add one spell from the arcanist spell list to the arcanist's spellbook. The spell must be at least 1 spell level below the highest level the arcanist can cast."},
+        {"Barbarian": "Add a +1/2 bonus to trap sense or +1/3 to the bonus from the superstitious rage power."},
+        {"Bard": "Add one spell known from the bard spell list. This spell must be at least one level below the highest spell level the bard can cast."},
+        {"Bloodrager": "Increase the bloodrager's total number of bloodrage rounds per day by 1."},
+        {"Brawler": "Gain a +1 bonus to the brawler's CMD when resisting two combat maneuvers of the brawler's choice."},
+        {"Cavalier": "Add +1/4 to the cavalier's banner bonus."},
+        {"Cleric": "Add a +1 bonus on caster level checks made to overcome the spell resistance of outsiders."},
+        {"Druid": "Add a +1/2 bonus on Diplomacy and Intimidate checks to change a creature's attitude."},
+        {"Fighter": "Add +1 to the Fighter's CMD when resisting two combat maneuvers of the character's choice."},
+        {"Gunslinger": "Add +1/4 point to the gunslinger's grit points."},
+        {"Hunter": "Add 1 skill rank to the hunter's animal companion. If the hunter replaces his animal companion, the new animal companion gains these bonus skill ranks."},
+        {"Inquisitor": "Add one spell known from the inquisitor spell list. This spell must be at least one level below the highest spell level the inquisitor can cast."},
+        {"Investigator": "Add one extract formula from the investigator's formula list to his formula book. This formula must be at least 1 formula level below the highest level the investigator can create."},
+        {"Magus": "Add +1/4 point to the magus' arcane pool."},
+        {"Monk": "Add +1/4 point to the monk's ki pool."},
+        {"Oracle": "Add one spell known from the oracle spell list. This spell must be at least one level below the highest spell level the oracle can cast."},
+        {"Paladin": "Add +1 to the paladin's energy resistance to one kind of energy (maximum +10)."},
+        {"Ranger": "Add +1 hit point or +1 skill rank to the ranger's animal companion. If the ranger ever replaces his companion, the new companion gains these bonus hit points or skill ranks."},
+        {"Rogue": "The rogue gains +1/6 of a new rogue talent."},
+        {"Shaman": "Add one spell from the cleric spell list that isn't on the shaman spell list to the list of spells the shaman knows. This spell must be at least 1 level below the highest spell level the shaman can cast."},
+        {"Skald": "Add one spell from the skald's spell list to the skald's known spells. This spell must be at least 1 spell level below the highest level the skald can cast."},
+        {"Slayer": "Gain 1/6 of a new slayer talent."},
+        {"Sorcerer": "Add one spell known from the sorcerer spell list. This spell must be at least one level below the highest spell level the sorcerer can cast."},
+        {"Summoner": "Add +1 hit point or +1 skill rank to the summoner's eidolon."},
+        {"Swashbuckler": "Increase the total number of points in the swashbuckler's panache pool by 1/4."},
+        {"Warpriest": "Gain 1/6 of a new bonus combat feat."},
+        {"Witch": "Add one spell from the witch spell list to the witch's familiar. This spell must be at least one level below the highest spell level she can cast. If the witch ever replaces her familiar, the new familiar knows these bonus spells."},
+        {"Wizard": "Add one spell from the wizard spell list to the wizard's spellbook. This spell must be at least one level below the highest spell level the wizard can cast."}
+    ],
+    "bonusfeats": [],
+    "spelllikeabilities": [],
+    "racialfeats":[
+        "Bestow Luck",
+        "Critical Versatility",
+        "Dauntless Destiny",
+        "Defiant Luck",
+        "Eclectic",
+        "Fast Learner",
+        "Fearless Curiosity",
+        "Heroic Will",
+        "Huntmaster",
+        "Improved Improvisation",
+        "Improvisation",
+        "Inexplicable Luck",
+        "Intimidating Confidence",
+        "Martial Mastery",
+        "Martial Versatility",
+        "Racial Heritage",
+        "Surge of Success"
     ],
     "racialprestigeclasses": []
   }
