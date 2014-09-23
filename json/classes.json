@@ -1,0 +1,70 @@
+{
+	"Classes": [
+		{"Barbarian": 
+			{ "Skills": [
+				"Acrobatics", "Climb", "Craft", "Handle Animal", "Intimidate", "Knowledge - Nature", "Perception", "Ride", "Survival", "Swim"
+				] 
+			}
+			"Hit":"d12"
+		},
+		{"Bard":
+			{"Skills": [
+				"Acrobatics", "Bluff", "Climb", "Craft", "Diplomacy", "Disguise", "Escape Artist", "Intimidate", "Knowledge - All", "Linguistics",
+				"Perception", "Perform", "Profession", "Sense Motive", "Sleight of Hand", "Spellcraft", "Stealth", "Use Magic Device"
+				]
+			}
+			"Hit":"d8"
+		},
+		{"Cleric":
+			{"Skills": [
+					"Appraise", "Craft", "Diplomacy", "Heal", "Knowledge - Arcana", "Knowledge - History", "Knowledge - Nobility", "Knowledge - Planes",
+					"Knowledge - Religion", "Linguistics", "Profession", "Sense Motive", "Spellcraft"
+				]
+			}
+			"Hit":"d8"
+		},
+		{"Druid":
+			{"Skills": [
+				"Climb", "Craft", "Fly", "Handle Animal", "Heal", "Knowledge - Geography", "Knowledge - Nature", "Perception", "Profession", "Ride",
+				"Spellcraft", "Survival", "Swim"
+				]
+			}
+			"Hit":"d8"
+		},
+		{"Fighter":
+			{"Skills": [
+				]
+			}
+		},
+		{"Monk":
+			{"Skills": [
+				]
+			}
+		},
+		{"Paladin":
+			{"Skills": [
+				]
+			}
+		},
+		{"Ranger":
+			{"Skills": [
+				]
+			}
+		},
+		{"Rogue":
+			{"Skills": [
+				]
+			}
+		},
+		{"Sorcerer":
+			{"Skills": [
+				]
+			}
+		},
+		{"Wizard":
+			{"Skills": [
+				]
+			}
+		}
+	]
+}
