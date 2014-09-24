@@ -9,99 +9,194 @@
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
-    
+
     <div class="row">
-      <div class="large-12 columns">
+      <div class="columns">
         <h1>Pathfinder Random Character Generator</h1>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-      	<div class="panel">
-	        <h3>Try a new random character with this generator!</h3>
-	        <p>Insert explanation texts here.</p>
-      	</div>
       </div>
     </div>
 
     <div class="row">
-      <div class="large-12 columns">
-        <a href="#" class="small button" id="btn_generate" >Generate</a>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="large-6 medium-6 columns">
+      <div class="columns">
         <div class="panel">
-          <h5 class="display-inline">Race: </h5> <span id="data-race"></span>
-        </div>
-      </div>
-      <div class="large-6 medium-6 columns">
-        <div class="panel">
-          <h5 class="display-inline">Class: </h5> <span id="data-class"></span>
+          <h3>Try a new random character with this generator!</h3>
+          <p>Insert explanation texts here.</p>
         </div>
       </div>
     </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="row">
-          <div class="columns">
-            <div class="panel">
-              <h4>Attributes</h4>
-              <div class="row">
-                <div class="large-6 medium-6 columns">
-                  <h5 class="display-inline">Hit Point: </h5><span id="data-hp"></span>
-                </div>
-                <div class="large-6 medium-6 columns">
-                  <h5 class="display-inline">Armor Class: </h5><span id="data-armorclass"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-4 medium-6 columns">
-                  <h5 class="display-inline">STR: </h5>
-                  <span id="data-str-score">?</span> (score) + <span id="data-str-mod">?</span> (mod)
-                </div>
-                <div class="large-4 medium-6 columns">
-                  <h5 class="display-inline">DEX: </h5>
-                  <span id="data-dex-score">?</span> (score) + <span id="data-dex-mod">?</span> (mod)
-                </div>
-                <div class="large-4 medium-6 columns">
-                  <h5 class="display-inline">CON: </h5>
-                  <span id="data-con-score">?</span> (score) + <span id="data-con-mod">?</span> (mod)
-                </div>
-                <div class="large-4 medium-6 columns">
-                  <h5 class="display-inline">INT: </h5>
-                  <span id="data-int-score">?</span> (score) + <span id="data-int-mod">?</span> (mod)
-                </div>
-                <div class="large-4 medium-6 columns">
-                  <h5 class="display-inline">WIS: </h5>
-                  <span id="data-wis-score">?</span> (score) + <span id="data-wis-mod">?</span> (mod)
-                </div>
-                <div class="large-4 medium-6 columns">
-                  <h5 class="display-inline">CHA: </h5>
-                  <span id="data-cha-score">?</span> (score) + <span id="data-cha-mod">?</span> (mod)
-                </div>
-              </div>
+
+    <form>
+
+      <div class="row">
+        <div class="columns">
+          <a href="#" class="small button" id="btn_generate" >Generate</a>
+        </div>
+      </div>
+
+      <div id="char-info" class="row">
+        <fieldset>
+          <legend>Character Info</legend>
+          <div class="medium-6 columns">
+            <label> Race
+              <input type="text" id="data-race" />
+            </label>
+          </div>
+          <div class="medium-6 columns">
+            <label> Class
+              <input type="text" id="data-class" />
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="attributes" class="row">
+        <fieldset>
+          <legend>Attributes</legend>
+          <div class="small-6 columns">
+            <label> Hit Point
+              <input type="number" id="data-hp" />
+            </label>
+          </div>
+          <div class="small-6 columns">
+            <label> Armor Class
+              <input type="number" id="data-armorclass" />
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="small-4 columns">
+              <label class="inline">Ability Name</label>
+            </div>
+            <div class="small-2 column">
+              <label class="inline">Ability Score</label>
+            </div>
+            <div class="small-2 column">
+              <label class="inline">Ability Modifier</label>
+            </div>
+            <div class="small-2 column">
+              <label class="inline">Temp Adjustment</label>
+            </div>
+            <div class="small-2 column">
+              <label class="inline">Temp Modifier</label>
             </div>
           </div>
-        </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label class="inline">Strength</label>
+            </div>
+            <div class="small-2 column">
+              <input type="number" ng-model="character.str" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label class="inline">Dexterity</label>
+            </div>
+            <div class="small-2 column">
+              <input type="number" ng-model="character.str" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label class="inline">Constitution</label>
+            </div>
+            <div class="small-2 column">
+              <input type="number" ng-model="character.con" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label class="inline">Intelligence</label>
+            </div>
+            <div class="small-2 column">
+              <input type="number" ng-model="character.int" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label class="inline">Wisdom</label>
+            </div>
+            <div class="small-2 column">
+              <input type="number" ng-model="character.wis" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label class="inline">Charisma</label>
+            </div>
+            <div class="small-2 column">
+              <input type="number" ng-model="character.cha" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+            <div class="small-2 column">
+              <input type="number" />
+            </div>
+          </div>
+
+        </fieldset>
       </div>
-    </div>
-        
-        
-<!--    Later: Skill    -->
-          
-        
-    
+
+    </form>
+
+
+
     <footer class="row">
       <div class="large-12 medium-12 columns">
       <p>Team: <a href="https://github.com/lcb931023">lcb931023</a>, <a href="https://github.com/valeatory">valeatory</a>, and <a href="https://github.com/amm4108">amm4108</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
         </div>
       </footer>
-    
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>

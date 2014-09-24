@@ -1,3 +1,11 @@
-.display-inline {
+.display-inline-block {
   display:inline-block;
+}
+
+.display-inline {
+  display:inline;
+}
+
+input[type="number"] {
+  width:6em;
 }
