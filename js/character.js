@@ -21,9 +21,12 @@ angular.module('character', [])
       this.int = Math.floor(Math.random() * 10) + 10;
       this.wis = Math.floor(Math.random() * 10) + 10;
       this.cha = Math.floor(Math.random() * 10) + 10;
-				
+			// Data independent data
+			this.gender = (Math.random() > 0.5) ? "male" : "female";
+			
       // From Races
       this.race = raceJson.races[Math.floor(Math.random() * raceJson.races.length)];
+			this.name = this.race.names[this.gender][Math.floor(Math.random() * this.race.names[this.gender].length)];
       this.attributeMods =
       {
         "str":0, "dex":0, "con":0, "int":0, "wis":0, "cha":0,
