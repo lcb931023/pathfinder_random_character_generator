@@ -27,6 +27,8 @@ angular.module('character', [])
       // From Races
       this.race = raceJson.races[Math.floor(Math.random() * raceJson.races.length)];
 			this.name = this.race.names[this.gender][Math.floor(Math.random() * this.race.names[this.gender].length)];
+			this.height = this.race.height[this.gender + "base"];
+			this.weight = this.race.weight[this.gender + "base"];
       this.attributeMods =
       {
         "str":0, "dex":0, "con":0, "int":0, "wis":0, "cha":0,
