@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html xmlns:ng="http://angularjs.org">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,11 +25,10 @@
       </div>
     </div>
 
-    <form>
-
+    <form ng-app="character" ng-controller="CharacterController as character">
       <div class="row">
         <div class="columns">
-          <a href="#" class="small button" id="btn_generate" >Generate</a>
+          <a href="#" class="small button" id="btn_generate" ng-click="character.generate()" >Generate</a>
         </div>
       </div>
 
@@ -38,12 +37,12 @@
           <legend>Character Info</legend>
           <div class="medium-6 columns">
             <label> Race
-              <input type="text" id="data-race" />
+              <input type="text" id="data-race" ng-model="character.race.name"/>
             </label>
           </div>
           <div class="medium-6 columns">
             <label> Class
-              <input type="text" id="data-class" />
+              <input type="text" id="data-class" ng-model="character.class"/>
             </label>
           </div>
         </fieldset>
@@ -54,12 +53,12 @@
           <legend>Attributes</legend>
           <div class="small-6 columns">
             <label> Hit Point
-              <input type="number" id="data-hp" />
+              <input type="number" id="data-hp" ng-model="character.hp"/>
             </label>
           </div>
           <div class="small-6 columns">
             <label> Armor Class
-              <input type="number" id="data-armorclass" />
+              <input type="number" id="data-armorclass" ng-model="character.ac"/>
             </label>
           </div>
 
@@ -88,7 +87,7 @@
               <input type="number" ng-model="character.str" />
             </div>
             <div class="small-2 column">
-              <input type="number" />
+              <input type="number" ng-model="character.attributeMods.str"/>
             </div>
             <div class="small-2 column">
               <input type="number" />
@@ -102,10 +101,10 @@
               <label class="inline">Dexterity</label>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.str" />
+              <input type="number" ng-model="character.dex" />
             </div>
             <div class="small-2 column">
-              <input type="number" />
+              <input type="number" ng-model="character.attributeMods.dex"/>
             </div>
             <div class="small-2 column">
               <input type="number" />
@@ -122,7 +121,7 @@
               <input type="number" ng-model="character.con" />
             </div>
             <div class="small-2 column">
-              <input type="number" />
+              <input type="number" ng-model="character.attributeMods.con"/>
             </div>
             <div class="small-2 column">
               <input type="number" />
@@ -139,7 +138,7 @@
               <input type="number" ng-model="character.int" />
             </div>
             <div class="small-2 column">
-              <input type="number" />
+              <input type="number" ng-model="character.attributeMods.int"/>
             </div>
             <div class="small-2 column">
               <input type="number" />
@@ -156,7 +155,7 @@
               <input type="number" ng-model="character.wis" />
             </div>
             <div class="small-2 column">
-              <input type="number" />
+              <input type="number" ng-model="character.attributeMods.wis"/>
             </div>
             <div class="small-2 column">
               <input type="number" />
@@ -173,7 +172,7 @@
               <input type="number" ng-model="character.cha" />
             </div>
             <div class="small-2 column">
-              <input type="number" />
+              <input type="number" ng-model="character.attributeMods.cha"/>
             </div>
             <div class="small-2 column">
               <input type="number" />
@@ -202,6 +201,7 @@
     <script>
       $(document).foundation();
     </script>
-    <script src="js/main.js"></script>
+    <script src="js/vendor/angular.js"></script>
+    <script src="js/character.js"></script>
   </body>
 </html>
