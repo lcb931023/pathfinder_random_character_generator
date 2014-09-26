@@ -81,19 +81,24 @@
       <div id="attributes" class="row">
         <fieldset>
           <legend>Attributes</legend>
-          <div class="small-4 columns">
+          <div class="small-3 columns">
             <label> Hit Point
               <input type="number" id="data-hp" ng-model="character.hp"/>
             </label>
           </div>
-					<div class="small-4 columns">
+					<div class="small-3 columns">
             <label> Hit Die
               <input type="text" ng-model="character.class.Hit"/>
             </label>
           </div>
-          <div class="small-4 columns">
+          <div class="small-3 columns">
             <label> Armor Class
               <input type="number" id="data-armorclass" ng-model="character.ac"/>
+            </label>
+          </div>
+					<div class="small-3 columns">
+            <label> Speed
+              <input type="text" ng-model="character.race.speed"/>
             </label>
           </div>
 
@@ -237,6 +242,7 @@
       $(document).foundation();
     </script>
     <script src="js/vendor/angular.js"></script>
+		<script src="js/diceParser.js"></script>
     <script src="js/character.js"></script>
   </body>
 </html>
