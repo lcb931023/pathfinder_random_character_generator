@@ -49,6 +49,23 @@ angular.module('character', ['diceParser'])
       // From Classes
 			this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
 			
+			
+			// Skills and Feat
+			this.skillRank = this.attributeMods.int + this.class.skillrank;
+			this.skills = [];
+			var skillBuffer = [];
+			skillBuffer = this.class.Skills.slice();
+			// Number of skill cannot exceed amount of choices
+			var skillAmount = (skillBuffer.length>this.skillRank) ? this.skillRank : skillBuffer.length;
+			console.log("skillAmount: " + skillAmount);
+			console.log("this.skillRank: " + this.skillRank);
+			console.log("skillBuffer.length: " + skillBuffer.length);
+			for (var i=0; i<skillAmount; i++) {
+				var iSkill = randomInt(0, skillBuffer.length);
+				this.skills.push(skillBuffer.splice(iSkill, 1)[0]);
+			}
+			// [TODO] necessary refinements for skill?
+			// [TODO] Feat
     };
 
   }]);

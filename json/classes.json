@@ -6,7 +6,8 @@
 				"Acrobatics", "Climb", "Craft", "Handle Animal", "Intimidate", "Knowledge - Nature", "Perception", "Ride", "Survival", "Swim"
 				] 
 			,
-			"Hit":"d12"
+			"Hit":"d12",
+			"skillrank":4
 		},
 		{
 			"name":"Bard",
@@ -15,7 +16,8 @@
 				"Perception", "Perform", "Profession", "Sense Motive", "Sleight of Hand", "Spellcraft", "Stealth", "Use Magic Device"
 				]
 			,
-			"Hit":"d8"
+			"Hit":"d8",
+			"skillrank":6
 		},
 		{
 			"name":"Cleric",
@@ -24,7 +26,8 @@
 					"Knowledge - Religion", "Linguistics", "Profession", "Sense Motive", "Spellcraft"
 				]
 			,
-			"Hit":"d8"
+			"Hit":"d8",
+			"skillrank":2
 		},
 		{
 			"name":"Druid",
@@ -33,49 +36,57 @@
 				"Spellcraft", "Survival", "Swim"
 				]
 			,
-			"Hit":"d8"
+			"Hit":"d8",
+			"skillrank":4
 		},
 		{
 		"name":"Fighter",
 			"Skills": [
 				]
-			
+			,
+			"skillrank":2
 		},
 		{
 			"name":"Monk",
 			"Skills": [
 				]
-			
+			,
+			"skillrank":4
 		},
 		{
 			"name":"Paladin",
 			"Skills": [
 				]
-			
+			,
+			"skillrank":2
 		},
 		{
 			"name":"Ranger",
 			"Skills": [
 				]
-			
+			,
+			"skillrank":6
 		},
 		{
 			"name":"Rogue",
 			"Skills": [
 				]
-			
+			,
+			"skillrank":8
 		},
 		{
 			"name":"Sorcerer",
 			"Skills": [
 				]
-			
+			,
+			"skillrank":2
 		},
 		{
 			"name":"Wizard",
 			"Skills": [
 				]
-			
+			,
+			"skillrank":2
 		}
 	]
 }
