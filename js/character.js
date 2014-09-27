@@ -20,12 +20,12 @@ angular.module('character', ['diceParser'])
     this.generate = function generate($http) {
 
       // Placeholder Values
-      this.str = randomInt(10, 21);
-      this.dex = randomInt(10, 21);
-      this.con = randomInt(10, 21);
-      this.int = randomInt(10, 21);
-      this.wis = randomInt(10, 21);
-      this.cha = randomInt(10, 21);
+      this.str = diceParser.roll("3d6");
+      this.dex = diceParser.roll("3d6");
+      this.con = diceParser.roll("3d6");
+      this.int = diceParser.roll("3d6");
+      this.wis = diceParser.roll("3d6");
+      this.cha = diceParser.roll("3d6");
 			// Data independent data
 			this.gender = (Math.random() > 0.5) ? "male" : "female";
 			
