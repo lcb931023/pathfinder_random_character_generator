@@ -57,9 +57,6 @@ angular.module('character', ['diceParser'])
 			skillBuffer = this.class.Skills.slice();
 			// Number of skill cannot exceed amount of choices
 			var skillAmount = (skillBuffer.length>this.skillRank) ? this.skillRank : skillBuffer.length;
-			console.log("skillAmount: " + skillAmount);
-			console.log("this.skillRank: " + this.skillRank);
-			console.log("skillBuffer.length: " + skillBuffer.length);
 			for (var i=0; i<skillAmount; i++) {
 				var iSkill = randomInt(0, skillBuffer.length);
 				this.skills.push(skillBuffer.splice(iSkill, 1)[0]);

@@ -224,7 +224,18 @@
 
         </fieldset>
       </div>
-
+			
+			<div id="languages" class="row">
+        <fieldset>
+          <legend>Languages</legend>
+					<ul>
+						<li ng-repeat="language in character.race.languages">
+							<span>{{language}}</span>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+			
 			<div id="skills" class="row">
         <fieldset>
           <legend>Skills</legend>
