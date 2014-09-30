@@ -1,106 +1,221 @@
 {
-	"Classes": [
-		{ 
-			"name": "Barbarian",
-			"Skills": [
-				"Acrobatics", "Climb", "Craft", "Handle Animal", "Intimidate", "Knowledge - Nature", "Perception", "Ride", "Survival", "Swim"
-				] 
-			,
-			"Hit":"d12",
-			"skillrank":4
-		},
-		{
-			"name":"Bard",
-			"Skills": [
-				"Acrobatics", "Bluff", "Climb", "Craft", "Diplomacy", "Disguise", "Escape Artist", "Intimidate", "Knowledge - All", "Linguistics",
-				"Perception", "Perform", "Profession", "Sense Motive", "Sleight of Hand", "Spellcraft", "Stealth", "Use Magic Device"
-				]
-			,
-			"Hit":"d8",
-			"skillrank":6
-		},
-		{
-			"name":"Cleric",
-			"Skills": [
-					"Appraise", "Craft", "Diplomacy", "Heal", "Knowledge - Arcana", "Knowledge - History", "Knowledge - Nobility", "Knowledge - Planes",
-					"Knowledge - Religion", "Linguistics", "Profession", "Sense Motive", "Spellcraft"
-				]
-			,
-			"Hit":"d8",
-			"skillrank":2
-		},
-		{
-			"name":"Druid",
-			"Skills": [
-				"Climb", "Craft", "Fly", "Handle Animal", "Heal", "Knowledge - Geography", "Knowledge - Nature", "Perception", "Profession", "Ride",
-				"Spellcraft", "Survival", "Swim"
-				]
-			,
-			"Hit":"d8",
-			"skillrank":4
-		},
-		{
-		"name":"Fighter",
-			"Skills": [
-				“Climb”, “Craft”, “Handle Animal”, “Intimidate”, “Knowledge - Dungeoneering”, “Knowledge - Engineering”, “Profession”, “Ride”, “Survivial”, “Swim”
-				]
-			,
-			“Hit”:”d10”,
-			"skillrank":2
-		},
-		{
-			"name":"Monk",
-			"Skills": [
-				“Acrobatics”, “Climb”, “Craft”, “Escape Artist”, “Intimidate”, “Knowledge - History”, “Knowledge - Religion”, “Perception”, “Perform”, “Profession”, “Ride”, “Sense Motive”, “Stealth”, “Swim”
-				]
-			,
-			“Hit”:”d8”
-			"skillrank":4
-		},
-		{
-			"name":"Paladin",
-			"Skills": [
-				“Craft”, “Diplomacy”, “Handle Animal”, “Heal”, “Knowledge - Nobility”, “Knowledge - Religion”, “Profession”, “Ride”, “Sense Motive”, “Spellcraft”
-				]
-			,
-			“Hit”:”d10”
-			"skillrank":2
-		},
-		{
-			"name":"Ranger",
-			"Skills": [
-				“Climb”, “Craft”, “Handle Animal”, “Heal”, “Intimidate”, “Knowledge - Dungeoneering”, “Knowledge - Geography”, “Knowledge - Nature”, “Perception”, “Profession”, “Ride”, “Spellcraft”, “Stealth”, “Survival”, “Swim”
-				]
-			,
-			“Hit”:”d10”
-			"skillrank":6
-		},
-		{
-			"name":"Rogue",
-			"Skills": [
-				“Acrobatics”, “Appraise”, “Bluff”, “Climb”, “Craft”, “Diplomacy”, “Disable Device”, “Disguise”, “Escape Artist”, “Intimidate”, “Knowledge - Dungeoneering”, “Knowledge - Local”, “Linguistics”, “Perceptions”, “Perform”, “Profession”, “Sense Motive”, “Sleight of Hand”, “Stealth”, “Swim”, “Use Magic Device”
-				]
-			,
-			“Hit”:”d8”
-			"skillrank":8
-		},
-		{
-			"name":"Sorcerer",
-			"Skills": [
-				“Appraise”, “Bluff”, “Craft”, “Fly”, “Intimidate”, “Knowledge”, “Profession”, “Spellcraft”, “Use Magic Device”
-				]
-			,
-			“Hit”:”d6”
-			"skillrank":2
-		},
-		{
-			"name":"Wizard",
-			"Skills": [
-				“Appraise”, “Craft”, “Fly”, “Knowledge - All”, “Linguistics”, “Profession”, “Spellcraft”
-				]
-			,
-			“Hit”:”d6”
-			"skillrank":2
-		}
-	]
+    "Classes": [
+        {
+            "name": "Barbarian",
+            "Skills": [
+                "Acrobatics",
+                "Climb",
+                "Craft",
+                "Handle Animal",
+                "Intimidate",
+                "Knowledge - Nature",
+                "Perception",
+                "Ride",
+                "Survival",
+                "Swim"
+            ],
+            "Hit": "d12",
+            "skillrank": 4
+        },
+        {
+            "name": "Bard",
+            "Skills": [
+                "Acrobatics",
+                "Bluff",
+                "Climb",
+                "Craft",
+                "Diplomacy",
+                "Disguise",
+                "Escape Artist",
+                "Intimidate",
+                "Knowledge - All",
+                "Linguistics",
+                "Perception",
+                "Perform",
+                "Profession",
+                "Sense Motive",
+                "Sleight of Hand",
+                "Spellcraft",
+                "Stealth",
+                "Use Magic Device"
+            ],
+            "Hit": "d8",
+            "skillrank": 6
+        },
+        {
+            "name": "Cleric",
+            "Skills": [
+                "Appraise",
+                "Craft",
+                "Diplomacy",
+                "Heal",
+                "Knowledge - Arcana",
+                "Knowledge - History",
+                "Knowledge - Nobility",
+                "Knowledge - Planes",
+                "Knowledge - Religion",
+                "Linguistics",
+                "Profession",
+                "Sense Motive",
+                "Spellcraft"
+            ],
+            "Hit": "d8",
+            "skillrank": 2
+        },
+        {
+            "name": "Druid",
+            "Skills": [
+                "Climb",
+                "Craft",
+                "Fly",
+                "Handle Animal",
+                "Heal",
+                "Knowledge - Geography",
+                "Knowledge - Nature",
+                "Perception",
+                "Profession",
+                "Ride",
+                "Spellcraft",
+                "Survival",
+                "Swim"
+            ],
+            "Hit": "d8",
+            "skillrank": 4
+        },
+        {
+            "name": "Fighter",
+            "Skills": [
+                "Climb",
+                "Craft",
+                "HandleAnimal",
+                "Intimidate",
+                "Knowledge-Dungeoneering",
+                "Knowledge-Engineering",
+                "Profession",
+                "Ride",
+                "Survivial",
+                "Swim"
+            ],
+            "Hit": "d10",
+            "skillrank": 2
+        },
+        {
+            "name": "Monk",
+            "Skills": [
+                "Acrobatics",
+                "Climb",
+                "Craft",
+                "EscapeArtist",
+                "Intimidate",
+                "Knowledge-History",
+                "Knowledge-Religion",
+                "Perception",
+                "Perform",
+                "Profession",
+                "Ride",
+                "SenseMotive",
+                "Stealth",
+                "Swim"
+            ],
+            "Hit": "d8",
+            "skillrank": 4
+        },
+        {
+            "name": "Paladin",
+            "Skills": [
+                "Craft",
+                "Diplomacy",
+                "HandleAnimal",
+                "Heal",
+                "Knowledge-Nobility",
+                "Knowledge-Religion",
+                "Profession",
+                "Ride",
+                "SenseMotive",
+                "Spellcraft"
+            ],
+            "Hit": "d10",
+            "skillrank": 2
+        },
+        {
+            "name": "Ranger",
+            "Skills": [
+                "Climb",
+                "Craft",
+                "HandleAnimal",
+                "Heal",
+                "Intimidate",
+                "Knowledge-Dungeoneering",
+                "Knowledge-Geography",
+                "Knowledge-Nature",
+                "Perception",
+                "Profession",
+                "Ride",
+                "Spellcraft",
+                "Stealth",
+                "Survival",
+                "Swim"
+            ],
+            "Hit": "d10",
+            "skillrank": 6
+        },
+        {
+            "name": "Rogue",
+            "Skills": [
+                "Acrobatics",
+                "Appraise",
+                "Bluff",
+                "Climb",
+                "Craft",
+                "Diplomacy",
+                "DisableDevice",
+                "Disguise",
+                "EscapeArtist",
+                "Intimidate",
+                "Knowledge-Dungeoneering",
+                "Knowledge-Local",
+                "Linguistics",
+                "Perceptions",
+                "Perform",
+                "Profession",
+                "SenseMotive",
+                "SleightofHand",
+                "Stealth",
+                "Swim",
+                "UseMagicDevice"
+            ],
+            "Hit": "d8",
+            "skillrank": 8
+        },
+        {
+            "name": "Sorcerer",
+            "Skills": [
+                "Appraise",
+                "Bluff",
+                "Craft",
+                "Fly",
+                "Intimidate",
+                "Knowledge",
+                "Profession",
+                "Spellcraft",
+                "UseMagicDevice"
+            ],
+            "Hit": "d6",
+            "skillrank": 2
+        },
+        {
+            "name": "Wizard",
+            "Skills": [
+                "Appraise",
+                "Craft",
+                "Fly",
+                "Knowledge-All",
+                "Linguistics",
+                "Profession",
+                "Spellcraft"
+            ],
+            "Hit": "d6",
+            "skillrank": 2
+        }
+    ]
 }
