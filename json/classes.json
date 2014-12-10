@@ -17,6 +17,8 @@
             "Hit": "d12",
             "skillrank": 4,
             "startingwealth":"3d6x10",
+            "alignments":["Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Evil", "Chaotic Neutral", "Chaotic Good"],
             "fortsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "refsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6]
@@ -51,6 +53,9 @@
             "Hit": "d8",
             "skillrank": 6,
             "startingwealth":"3d6x10",
+            "alignments":["Lawful Evil", "Lawful Neutral", "Lawful Good",
+                          "Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Evil", "Chaotic Neutral", "Chaotic Good"],
             "fortsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "refsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12]
@@ -81,6 +86,9 @@
             "Hit": "d8",
             "skillrank": 2,
             "startingwealth":"4d6x10",
+            "alignments":["Lawful Evil", "Lawful Neutral", "Lawful Good",
+                          "Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Evil", "Chaotic Neutral", "Chaotic Good"],
             "fortsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "refsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12]
@@ -114,6 +122,9 @@
             "Hit": "d8",
             "skillrank": 4,
             "startingwealth":"2d6x10",
+            "alignments":["Lawful Neutral",
+                          "Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Neutral"],
             "fortsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "refsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12]
@@ -146,6 +157,9 @@
             "Hit": "d10",
             "skillrank": 2,
             "startingwealth":"5d6x10",
+            "alignments":["Lawful Evil", "Lawful Neutral", "Lawful Good",
+                          "Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Evil", "Chaotic Neutral", "Chaotic Good"],
             "fortsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "refsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6]
@@ -181,6 +195,7 @@
             "Hit": "d8",
             "skillrank": 4,
             "startingwealth":"1d6x10",
+            "alignments":["Lawful Evil", "Lawful Neutral", "Lawful Good"],
             "fortsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "refsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12]
@@ -215,6 +230,7 @@
             "Hit": "d10",
             "skillrank": 2,
             "startingwealth":"5d6x10",
+            "alignments":["Lawful Good"],
             "fortsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "refsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12]
@@ -251,6 +267,9 @@
             "Hit": "d10",
             "skillrank": 6,
             "startingwealth":"5d6x10",
+            "alignments":["Lawful Evil", "Lawful Neutral", "Lawful Good",
+                          "Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Evil", "Chaotic Neutral", "Chaotic Good"],
             "fortsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "refsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6]
@@ -328,6 +347,9 @@
             "Hit": "d6",
             "skillrank": 2,
             "startingwealth":"2d6x10",
+            "alignments":["Lawful Evil", "Lawful Neutral", "Lawful Good",
+                          "Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Evil", "Chaotic Neutral", "Chaotic Good"],
             "fortsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "refsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12]
@@ -353,6 +375,9 @@
             "Hit": "d6",
             "skillrank": 2,
             "startingwealth":"2d6x10",
+            "alignments":["Lawful Evil", "Lawful Neutral", "Lawful Good",
+                          "Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Evil", "Chaotic Neutral", "Chaotic Good"],
             "fortsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "refsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12]
