@@ -75,6 +75,13 @@
               <input type="text" ng-model="character.weight"/>
             </label>
           </div>
+          <div class="small-4 columns">
+            <label> Alignment
+              <select ng-model="alignment" ng-options="alignment for alignment in character.class.alignments">
+
+              </select>
+            </label>
+          </div>
         </fieldset>
       </div>
 
@@ -224,7 +231,7 @@
 
         </fieldset>
       </div>
-			
+
 			<div id="languages" class="row">
         <fieldset>
           <legend>Languages</legend>
@@ -235,7 +242,7 @@
 					</ul>
 				</fieldset>
 			</div>
-			
+
 			<div id="skills" class="row">
         <fieldset>
           <legend>Skills</legend>
@@ -246,7 +253,7 @@
 					</ul>
 				</fieldset>
 			</div>
-			
+
     </form>
 
 
