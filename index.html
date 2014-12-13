@@ -95,7 +95,7 @@
           </div>
           <div class="small-2 columns">
             <label> Hit Point
-              <input type="number" id="data-hp" ng-model="character.hp"/>
+              <input type="number" ng-model="character.level[character.curLevel].hp"/>
             </label>
           </div>
           <div class="small-2 columns">
@@ -105,7 +105,7 @@
           </div>
           <div class="small-3 columns">
             <label> Armor Class
-              <input type="number" id="data-armorclass" ng-model="character.ac"/>
+              <input type="number" ng-model="character.ac"/>
             </label>
           </div>
 					<div class="small-3 columns">
@@ -124,12 +124,6 @@
             <div class="small-2 column">
               <label class="inline">Ability Modifier</label>
             </div>
-            <div class="small-2 column">
-              <label class="inline">Temp Adjustment</label>
-            </div>
-            <div class="small-2 column">
-              <label class="inline">Temp Modifier</label>
-            </div>
           </div>
           <div class="row">
             <div class="small-4 columns">
@@ -140,12 +134,6 @@
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.str"/>
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
             </div>
           </div>
           <div class="row">
@@ -158,12 +146,6 @@
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.dex"/>
             </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
           </div>
           <div class="row">
             <div class="small-4 columns">
@@ -174,12 +156,6 @@
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.con"/>
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
             </div>
           </div>
           <div class="row">
@@ -192,12 +168,6 @@
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.int"/>
             </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
           </div>
           <div class="row">
             <div class="small-4 columns">
@@ -209,12 +179,6 @@
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.wis"/>
             </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
           </div>
           <div class="row">
             <div class="small-4 columns">
@@ -225,12 +189,6 @@
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.cha"/>
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
-            </div>
-            <div class="small-2 column">
-              <input type="number" />
             </div>
           </div>
 
