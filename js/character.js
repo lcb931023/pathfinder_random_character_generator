@@ -6,7 +6,7 @@ angular.module('character', ['diceParser'])
         this.raceJson = res.data;
       }
     );
-		$http.get('json/classes.json')
+                $http.get('json/classes.json')
       .then(function(res){
         this.classJson = res.data;
       }
@@ -29,14 +29,16 @@ angular.module('character', ['diceParser'])
       this.int = diceParser.roll("3d6");
       this.wis = diceParser.roll("3d6");
       this.cha = diceParser.roll("3d6");
-			// Data independent data
-			this.gender = (Math.random() > 0.5) ? "male" : "female";
+
+
+      // Data independent data
+      this.gender = (Math.random() > 0.5) ? "male" : "female";
 
       // From Races
       this.race = raceJson.races[randomInt(0, raceJson.races.length)];
-			this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
-			this.height = this.race.height[this.gender + "base"] + diceParser.roll(this.race.height[this.gender + "mod"]);
-			this.weight = this.race.weight[this.gender + "base"] + diceParser.roll(this.race.weight[this.gender + "mod"]);
+                        this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
+                        this.height = this.race.height[this.gender + "base"] + diceParser.roll(this.race.height[this.gender + "mod"]);
+                        this.weight = this.race.weight[this.gender + "base"] + diceParser.roll(this.race.weight[this.gender + "mod"]);
       this.attributeMods =
       {
         "str":0, "dex":0, "con":0, "int":0, "wis":0, "cha":0,
@@ -50,8 +52,22 @@ angular.module('character', ['diceParser'])
       }
 
       // From Classes
-			this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
+      this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
 
+
+      // Skills
+      this.skillRank = this.attributeMods.int + this.class.skillrank; //how many skill points you get per level
+      this.skills = [];
+      this.skills = this.class.Skills.slice();//gives an array
+
+      // [TODO] necessary refinements for skill?
+      // [TODO] Feat
+      this.feats = [];
+      this.feats = this.race.bonusfeats.slice();
+      //racial feats are available to the player,
+      //but not given to them by default
+      this.freefeats = 0;//(this.level+1)/2
+      this.restrictedfeats = []
 
 			// Skills and Feat
 			this.skillRank = this.attributeMods.int + this.class.skillrank;
@@ -74,6 +90,9 @@ angular.module('character', ['diceParser'])
     // Initiate all 20 levels with the current attributes
     this.generateLevels = function generateLevels() {
 
+      // Traits
+      this.traits = [];
+      this.traits = this.race.traits.slice();
     };
 
     // Fires everytime the Level needs recalculate
