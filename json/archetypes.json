@@ -4,7 +4,7 @@
 			"class": "Barbarian",
 			"standard": ["str", "con", "dex"]
 		},
-		
+
 		{
 			"class": "Bard",
 			"standard": ["cha", "dex", "con"],
@@ -14,8 +14,8 @@
 		{
 			"class": "Cleric",
 			"standard": ["wis", "cha", "con", "str"],
-			"melee": ["wis", "str", "con"],
-			"melee!": ["str", "wis", "con"]
+			"wiseMelee": ["wis", "str", "con"],
+			"melee": ["str", "wis", "con"]
 		},
 		{
 			"class": "Druid",

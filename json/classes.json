@@ -31,11 +31,11 @@
 			"Stats": ["str","con","dex"],
 			"archetypes": ["standard"]
         },
-    
-        
-    
-        
-    
+
+
+
+
+
         {
             "name": "Bard",
             "Skills": [
@@ -75,12 +75,12 @@
 			"Stats": ["cha", "dex", "con"],
 			"archetypes": ["standard", "melee", "archer"]
         },
-    
-        
-    
-        
-    
-        
+
+
+
+
+
+
         {
             "name": "Cleric",
             "Skills": [
@@ -113,17 +113,17 @@
                     "+11/+6/+1","+12/+7/+2","+12/+7/+2",
                     "+13/+8/+3","+14/+9/+4","+15/+10/+5"],
 			"Stats": ["wis", "char", "con", "str"],
-			"archetypes": ["standard", "melee", "melee!"]
+			"archetypes": ["standard", "melee", "wiseMelee"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
+
+
         {
             "name": "Druid",
             "Skills": [
@@ -158,17 +158,17 @@
 			"Stats": ["wis", "str"],
 			"archetypes": ["dps", "tank"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Fighter",
             "Skills": [
@@ -201,16 +201,16 @@
 			"Stats": ["str","con","dex"],
 			"archetypes": ["melee", "tank", "fastMelee", "archer"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Monk",
             "Skills": [
@@ -244,19 +244,19 @@
 			"Stats": ["str", "wis", "dex", "con"],
 			"archetypes": ["standard", "stunning", "fast"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Paladin",
             "Skills": [
@@ -287,16 +287,16 @@
 			"Stats": ["str", "cha", "con"],
 			"archetypes": ["standard", "tank", "archer"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Ranger",
             "Skills": [
@@ -334,20 +334,20 @@
 			"Stats": ["str", "dex", "con"],
 			"archetypes": ["melee", "tank", "fastMelee", "archer"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Rogue",
             "Skills": [
@@ -387,17 +387,17 @@
 			"Stats": ["dex", "str", "con"],
 			"archetypes": ["standard", "face"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Sorcerer",
             "Skills": [
@@ -426,13 +426,13 @@
 			"Stats": ["cha", "dex", "con"],
 			"archetypes": ["fast", "tough", "melee"]
         },
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
         {
             "name": "Wizard",
             "Skills": [
@@ -461,6 +461,3 @@
         }
     ]
 }
-
-
-
