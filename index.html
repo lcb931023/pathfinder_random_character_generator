@@ -75,18 +75,30 @@
               <input type="text" ng-model="character.weight"/>
             </label>
           </div>
+          <div class="small-4 columns">
+            <label> Alignment
+              <select ng-model="alignment" ng-options="alignment for alignment in character.class.alignments">
+
+              </select>
+            </label>
+          </div>
         </fieldset>
       </div>
 
       <div id="attributes" class="row">
         <fieldset>
           <legend>Attributes</legend>
-          <div class="small-3 columns">
+          <div class="small-2 columns">
+            <label> Level
+              <input type="number" ng-model="character.curLevel"/>
+            </label>
+          </div>
+          <div class="small-2 columns">
             <label> Hit Point
               <input type="number" id="data-hp" ng-model="character.hp"/>
             </label>
           </div>
-					<div class="small-3 columns">
+          <div class="small-2 columns">
             <label> Hit Die
               <input type="text" ng-model="character.class.Hit"/>
             </label>
@@ -224,7 +236,7 @@
 
         </fieldset>
       </div>
-			
+
 			<div id="languages" class="row">
         <fieldset>
           <legend>Languages</legend>
@@ -235,7 +247,7 @@
 					</ul>
 				</fieldset>
 			</div>
-			
+
 			<div id="skills" class="row">
         <fieldset>
           <legend>Skills</legend>
@@ -246,7 +258,7 @@
 					</ul>
 				</fieldset>
 			</div>
-			
+
     </form>
 
 

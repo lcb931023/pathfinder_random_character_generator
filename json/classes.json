@@ -31,11 +31,11 @@
 			"Stats": ["str","con","dex"],
 			"archetypes": ["standard"]
         },
-    
-        
-    
-        
-    
+
+
+
+
+
         {
             "name": "Bard",
             "Skills": [
@@ -120,12 +120,12 @@
 				["6","6","6","6","6","5","5"]
 				]
         },
-    
-        
-    
-        
-    
-        
+
+
+
+
+
+
         {
             "name": "Cleric",
             "Skills": [
@@ -158,18 +158,18 @@
                     "+11/+6/+1","+12/+7/+2","+12/+7/+2",
                     "+13/+8/+3","+14/+9/+4","+15/+10/+5"],
 			"Stats": ["wis", "char", "con", "str"],
-			"archetypes": ["standard", "melee", "melee!"],
+			"archetypes": ["standard", "melee", "wiseMelee"],
 			"spellmod":"wis"
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
+
+
         {
             "name": "Druid",
             "Skills": [
@@ -227,17 +227,17 @@
 				["4","4","4","4","4","4","4","4","4","4"]
 			]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Fighter",
             "Skills": [
@@ -270,16 +270,16 @@
 			"Stats": ["str","con","dex"],
 			"archetypes": ["melee", "tank", "fastMelee", "archer"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Monk",
             "Skills": [
@@ -313,19 +313,19 @@
 			"Stats": ["str", "wis", "dex", "con"],
 			"archetypes": ["standard", "stunning", "fast"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Paladin",
             "Skills": [
@@ -379,16 +379,16 @@
 				["4","4","3","3"]
 			]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Ranger",
             "Skills": [
@@ -449,20 +449,20 @@
 				["4","4","3","3"]
 			]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Rogue",
             "Skills": [
@@ -491,6 +491,9 @@
             "Hit": "d8",
             "skillrank": 8,
             "startingwealth":"4d6x10",
+            "alignments":["Lawful Evil", "Lawful Neutral", "Lawful Good",
+                          "Neutral Evil", "True Neutral", "Neutral Good",
+                          "Chaotic Evil", "Chaotic Neutral", "Chaotic Good"],
             "fortsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "refsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
@@ -502,17 +505,17 @@
 			"Stats": ["dex", "str", "con"],
 			"archetypes": ["standard", "face"]
         },
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Sorcerer",
             "Skills": [
@@ -586,13 +589,13 @@
 				["20","9","5","5","4","4","4","3","3","3","3"]
 			]
         },
-    
-        
-    
-        
-    
-        
-    
+
+
+
+
+
+
+
         {
             "name": "Wizard",
             "Skills": [
@@ -622,6 +625,3 @@
         }
     ]
 }
-
-
-
