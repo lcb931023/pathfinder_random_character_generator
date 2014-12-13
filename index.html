@@ -233,8 +233,8 @@
       </div>
 
             <div id="languages" class="row">
-        <fieldset>
-          <legend>Languages</legend>
+                <fieldset>
+                  <legend>Languages</legend>
                     <ul>
                         <li ng-repeat="language in character.race.languages">
                             <span>{{language}}</span>
@@ -244,11 +244,37 @@
             </div>
 
             <div id="skills" class="row">
-        <fieldset>
-          <legend>Skills</legend>
+                <fieldset>
+                  <legend>Skills</legend>
                     <ul>
                         <li ng-repeat="skill in character.skills">
                             <span>{{skill}}</span>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div id="feats" class="row">
+                <fieldset>
+                  <legend>Feats</legend>
+                    <ul>
+                        <li ng-repeat="feat in character.feats">
+                            <span>{{feat}}</span>
+                        </li>
+                        <label>Free Feats:
+                            <input type="number" ng-model="character.freefeats" />
+                        </label>
+                        <li ng-repeat="restricted in character.restrictedfeats">
+                            <span>{{restricted}}</span>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div id="traits" class="row">
+                <fieldset>
+                  <legend>Traits</legend>
+                    <ul>
+                        <li ng-repeat="trait in character.traits">
+                            <span>{{trait}}</span>
                         </li>
                     </ul>
                 </fieldset>
