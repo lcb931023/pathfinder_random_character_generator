@@ -66,6 +66,19 @@ angular.module('character', ['diceParser'])
 			}
 			// [TODO] necessary refinements for skill?
 			// [TODO] Feat
+
+      this.generateLevels();
+    };
+
+    this.generateLevels = function generateLevels() {
+
+    };
+
+    // Fires everytime the Level needs recalculate
+    // easiest way is to fire it for every level change
+    // and every manual field change
+    this.updateLevels = function updateLevels() {
+
     };
 
   }]);
