@@ -93,17 +93,31 @@ angular.module('character', ['diceParser'])
 
     // Initiate all 20 levels with the current attributes
     this.generateLevels = function generateLevels() {
-      
+      this.levels = [];
+      for (var i = 0; i < 20; i ++) {
+        var tLevel = {};
+        tLevel.fortsaves = this.class.fortsaves[i];
+        tLevel.refsaves = this.class.refsaves[i];
+        tLevel.willsaves = this.class.willsaves[i];
+        this.levels.push(tLevel);
+      }
     };
 
     // Fires everytime the Level needs recalculate
     // easiest way is to fire it for every level change
     // and every manual field change
     this.updateLevels = function updateLevels() {
-
+      // Do tha calculation
+      // apply back to character
+      this.applyLevel(this.curlevel);
     };
 
     // Apply the level of choice to character's object variables,
     // so view can access them without worrying about the level
-
+    this.applyLevel = function applyLevel(pLevel) {
+      var iLevel = pLevel - 1;
+      this.fortsaves = this.levels[iLevel].fortsaves;
+      this.refsaves = this.levels[iLevel].refsaves;
+      this.willsaves = this.levels[iLevel].willsaves;
+    };
   }]);
