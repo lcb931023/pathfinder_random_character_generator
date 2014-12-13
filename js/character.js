@@ -101,6 +101,7 @@ angular.module('character', ['diceParser'])
         tLevel.fortsaves = this.class.fortsaves[i];
         tLevel.refsaves = this.class.refsaves[i];
         tLevel.willsaves = this.class.willsaves[i];
+        //BAB
         //ability points
         //free feats
         //available skill ranks
