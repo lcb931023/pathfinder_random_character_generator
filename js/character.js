@@ -83,16 +83,17 @@ angular.module('character', ['diceParser'])
 			// [TODO] necessary refinements for skill?
 			// [TODO] Feat
 
+      // Traits
+      this.traits = [];
+      this.traits = this.race.traits.slice();
+
       this.generateLevels();
       this.applyLevel(this.curLevel);
     };
 
     // Initiate all 20 levels with the current attributes
     this.generateLevels = function generateLevels() {
-
-      // Traits
-      this.traits = [];
-      this.traits = this.race.traits.slice();
+      
     };
 
     // Fires everytime the Level needs recalculate
