@@ -23,12 +23,13 @@ angular.module('character', ['diceParser'])
       this.curLevel = Math.floor(Math.random() * 20 ) + 1;
 
       // Placeholder Values
-      this.str = diceParser.roll("3d6");
-      this.dex = diceParser.roll("3d6");
-      this.con = diceParser.roll("3d6");
-      this.int = diceParser.roll("3d6");
-      this.wis = diceParser.roll("3d6");
-      this.cha = diceParser.roll("3d6");
+      this.attributeScores = {};
+      this.attributeScores.str = diceParser.roll("3d6");
+      this.attributeScores.dex = diceParser.roll("3d6");
+      this.attributeScores.con = diceParser.roll("3d6");
+      this.attributeScores.int = diceParser.roll("3d6");
+      this.attributeScores.wis = diceParser.roll("3d6");
+      this.attributeScores.cha = diceParser.roll("3d6");
 
 
       // Data independent data
