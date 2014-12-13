@@ -96,9 +96,17 @@ angular.module('character', ['diceParser'])
       this.levels = [];
       for (var i = 0; i < 20; i ++) {
         var tLevel = {};
+        //saves
         tLevel.fortsaves = this.class.fortsaves[i];
         tLevel.refsaves = this.class.refsaves[i];
         tLevel.willsaves = this.class.willsaves[i];
+        //ability points
+        //free feats
+        //available skill ranks
+        //spells per day
+        //spells known
+        //hit points
+        //todo: feats and traits granted by class per level
         this.levels.push(tLevel);
       }
     };
