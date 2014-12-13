@@ -1,0 +1,68 @@
+{
+	"Archetypes": [
+		{
+			"class": "Barbarian",
+			"standard": ["str", "con", "dex"]
+		},
+		
+		{
+			"class": "Bard",
+			"standard": ["cha", "dex", "con"],
+			"melee": ["cha", "str", "con"],
+			"archer": ["cha", "dex", "str", "con"]
+		},
+		{
+			"class": "Cleric",
+			"standard": ["wis", "cha", "con", "str"],
+			"melee": ["wis", "str", "con"],
+			"melee!": ["str", "wis", "con"]
+		},
+		{
+			"class": "Druid",
+			"dps": ["wis", "str"],
+			"tank": ["wis", "con"]
+		},
+		{
+			"class": "Fighter",
+			"melee": ["str", "con", "dex"],
+			"tank": ["con", "str", "dex"],
+			"fastMelee": ["str", "dex", "con"],
+			"archer": ["dex", "str", "con"]
+		},
+		{
+			"class": "Monk",
+			"standard": ["str", "wis", "dex", "con"],
+			"stunning": ["wis", "str", "dex", "con"],
+			"fast": ["wis", "dex", "con"]
+		},
+		{
+			"class": "Paladin",
+			"standard": ["str", "cha", "con"],
+			"tank": ["str", "con", "cha"],
+			"archer": ["dex", "str", "cha"]
+		},
+		{
+			"class": "Ranger",
+			"melee": ["str", "con", "dex"],
+			"tank": ["con", "str", "dex"],
+			"fastMelee": ["str", "dex", "con"],
+			"archer": ["dex", "str", "con"]
+		},
+		{
+			"class": "Rogue",
+			"standard": ["dex", "str", "con"],
+			"face": ["cha", "dex", "str", "con"]
+		},
+		{
+			"class": "Sorcerer",
+			"fast": ["cha", "dex", "con"],
+			"tough": ["cha", "con", "dex"],
+			"melee": ["cha", "str", "con"]
+		},
+		{
+			"class": "Wizard",
+			"fast": ["int", "dex", "con"],
+			"tough": ["int", "con", "dex"]
+		}
+	]
+}
