@@ -35,12 +35,12 @@
       <div id="char-info" class="row">
         <fieldset>
           <legend>Character Info</legend>
-					<div class="small-6 medium-3 columns">
+                    <div class="small-6 medium-3 columns">
             <label> Name
               <input type="text" ng-model="character.name"/>
             </label>
           </div>
-					<div class="small-6 medium-3 columns">
+                    <div class="small-6 medium-3 columns">
             <label> Gender
               <input type="text" ng-model="character.gender"/>
             </label>
@@ -55,22 +55,22 @@
               <input type="text" id="data-class" ng-model="character.class.name"/>
             </label>
           </div>
-					<div class="small-2 columns">
+                    <div class="small-2 columns">
             <label> Age
               <input type="number" ng-model="character.race.age.adulthood"/>
             </label>
           </div>
-					<div class="small-6 columns">
+                    <div class="small-6 columns">
             <label> Size
               <input type="text" ng-model="character.race.size"/>
             </label>
           </div>
-					<div class="small-2 columns">
+                    <div class="small-2 columns">
             <label> Height
               <input type="text" ng-model="character.height"/>
             </label>
           </div>
-					<div class="small-2 columns">
+                    <div class="small-2 columns">
             <label> Weight
               <input type="text" ng-model="character.weight"/>
             </label>
@@ -93,7 +93,7 @@
               <input type="number" id="data-hp" ng-model="character.hp"/>
             </label>
           </div>
-					<div class="small-3 columns">
+                    <div class="small-3 columns">
             <label> Hit Die
               <input type="text" ng-model="character.class.Hit"/>
             </label>
@@ -103,7 +103,7 @@
               <input type="number" id="data-armorclass" ng-model="character.ac"/>
             </label>
           </div>
-					<div class="small-3 columns">
+                    <div class="small-3 columns">
             <label> Speed
               <input type="text" ng-model="character.race.speed"/>
             </label>
@@ -232,27 +232,27 @@
         </fieldset>
       </div>
 
-			<div id="languages" class="row">
+            <div id="languages" class="row">
         <fieldset>
           <legend>Languages</legend>
-					<ul>
-						<li ng-repeat="language in character.race.languages">
-							<span>{{language}}</span>
-						</li>
-					</ul>
-				</fieldset>
-			</div>
+                    <ul>
+                        <li ng-repeat="language in character.race.languages">
+                            <span>{{language}}</span>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
 
-			<div id="skills" class="row">
+            <div id="skills" class="row">
         <fieldset>
           <legend>Skills</legend>
-					<ul>
-						<li ng-repeat="skill in character.skills">
-							<span>{{skill}}</span>
-						</li>
-					</ul>
-				</fieldset>
-			</div>
+                    <ul>
+                        <li ng-repeat="skill in character.skills">
+                            <span>{{skill}}</span>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
 
     </form>
 
@@ -271,7 +271,7 @@
       $(document).foundation();
     </script>
     <script src="js/vendor/angular.js"></script>
-		<script src="js/diceParser.js"></script>
+        <script src="js/diceParser.js"></script>
     <script src="js/character.js"></script>
   </body>
 </html>
