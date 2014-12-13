@@ -11,13 +11,16 @@ angular.module('character', ['diceParser'])
         this.classJson = res.data;
       }
     );
-        
-                // helper. Inclusive min, exclusive max
-                var randomInt = function(min, max){
-                        return Math.floor(Math.random() * (max - min) ) + min;
-                };
-        
+
+		// HELPER
+    // Inclusive min, exclusive max
+		var randomInt = function(min, max){
+			return Math.floor(Math.random() * (max - min) ) + min;
+		};
+
     this.generate = function generate($http) {
+
+      this.curLevel = Math.floor(Math.random() * 20 ) + 1;
 
       // Placeholder Values
       this.str = diceParser.roll("3d6");
@@ -26,9 +29,11 @@ angular.module('character', ['diceParser'])
       this.int = diceParser.roll("3d6");
       this.wis = diceParser.roll("3d6");
       this.cha = diceParser.roll("3d6");
-                        // Data independent data
-                        this.gender = (Math.random() > 0.5) ? "male" : "female";
-                        
+
+
+      // Data independent data
+      this.gender = (Math.random() > 0.5) ? "male" : "female";
+
       // From Races
       this.race = raceJson.races[randomInt(0, raceJson.races.length)];
                         this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
@@ -47,27 +52,27 @@ angular.module('character', ['diceParser'])
       }
 
       // From Classes
-                        this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
-                        
-                        
-                        // Skills
-                        this.skillRank = this.attributeMods.int + this.class.skillrank; //how many skill points you get per level
-                        this.skills = [];
-                        this.skills = this.class.Skills.slice();//gives an array
-        
-                        // [TODO] necessary refinements for skill?
-                        // [TODO] Feat
-                        this.feats = [];
-                        this.feats = this.race.bonusfeats.slice();
-                        //racial feats are available to the player, 
-                        //but not given to them by default
-                        this.freefeats = 0;//(this.level+1)/2
-                        this.restrictedfeats = []
+      this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
+      
+      
+      // Skills
+      this.skillRank = this.attributeMods.int + this.class.skillrank; //how many skill points you get per level
+      this.skills = [];
+      this.skills = this.class.Skills.slice();//gives an array
 
-                        // Traits
-                        this.traits = [];
-                        this.traits = this.race.traits.slice();
-                        
+      // [TODO] necessary refinements for skill?
+      // [TODO] Feat
+      this.feats = [];
+      this.feats = this.race.bonusfeats.slice();
+      //racial feats are available to the player, 
+      //but not given to them by default
+      this.freefeats = 0;//(this.level+1)/2
+      this.restrictedfeats = []
+
+      // Traits
+      this.traits = [];
+      this.traits = this.race.traits.slice();
+                   
     };
 
   }]);
