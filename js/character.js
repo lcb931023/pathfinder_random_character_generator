@@ -68,8 +68,10 @@ angular.module('character', ['diceParser'])
 			// [TODO] Feat
 
       this.generateLevels();
+      this.applyLevel(this.curLevel);
     };
 
+    // Initiate all 20 levels with the current attributes
     this.generateLevels = function generateLevels() {
 
     };
@@ -80,5 +82,8 @@ angular.module('character', ['diceParser'])
     this.updateLevels = function updateLevels() {
 
     };
+
+    // Apply the level of choice to character's object variables,
+    // so view can access them without worrying about the level
 
   }]);
