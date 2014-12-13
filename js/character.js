@@ -11,13 +11,16 @@ angular.module('character', ['diceParser'])
         this.classJson = res.data;
       }
     );
-	
-		// helper. Inclusive min, exclusive max
+
+		// HELPER
+    // Inclusive min, exclusive max
 		var randomInt = function(min, max){
 			return Math.floor(Math.random() * (max - min) ) + min;
 		};
-	
+
     this.generate = function generate($http) {
+
+      this.curLevel = Math.floor(Math.random() * 20 ) + 1;
 
       // Placeholder Values
       this.str = diceParser.roll("3d6");
@@ -28,7 +31,7 @@ angular.module('character', ['diceParser'])
       this.cha = diceParser.roll("3d6");
 			// Data independent data
 			this.gender = (Math.random() > 0.5) ? "male" : "female";
-			
+
       // From Races
       this.race = raceJson.races[randomInt(0, raceJson.races.length)];
 			this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
@@ -48,8 +51,8 @@ angular.module('character', ['diceParser'])
 
       // From Classes
 			this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
-			
-			
+
+
 			// Skills and Feat
 			this.skillRank = this.attributeMods.int + this.class.skillrank;
 			this.skills = [];

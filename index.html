@@ -88,12 +88,17 @@
       <div id="attributes" class="row">
         <fieldset>
           <legend>Attributes</legend>
-          <div class="small-3 columns">
+          <div class="small-2 columns">
+            <label> Level
+              <input type="number" ng-model="character.curLevel"/>
+            </label>
+          </div>
+          <div class="small-2 columns">
             <label> Hit Point
               <input type="number" id="data-hp" ng-model="character.hp"/>
             </label>
           </div>
-					<div class="small-3 columns">
+          <div class="small-2 columns">
             <label> Hit Die
               <input type="text" ng-model="character.class.Hit"/>
             </label>
