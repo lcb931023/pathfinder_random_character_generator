@@ -246,7 +246,7 @@
             "Skills": [
                 "Climb",
                 "Craft",
-                "HandleAnimal",
+                "Handle Animal",
                 "Intimidate",
                 "Knowledge-Dungeoneering",
                 "Knowledge-Engineering",
@@ -289,7 +289,7 @@
                 "Acrobatics",
                 "Climb",
                 "Craft",
-                "EscapeArtist",
+                "Escape Artist",
                 "Intimidate",
                 "Knowledge-History",
                 "Knowledge-Religion",
@@ -297,7 +297,7 @@
                 "Perform",
                 "Profession",
                 "Ride",
-                "SenseMotive",
+                "Sense Motive",
                 "Stealth",
                 "Swim"
             ],
@@ -334,13 +334,13 @@
             "Skills": [
                 "Craft",
                 "Diplomacy",
-                "HandleAnimal",
+                "Handle Animal",
                 "Heal",
                 "Knowledge-Nobility",
                 "Knowledge-Religion",
                 "Profession",
                 "Ride",
-                "SenseMotive",
+                "Sense Motive",
                 "Spellcraft"
             ],
             "Hit": "d10",
@@ -397,7 +397,7 @@
             "Skills": [
                 "Climb",
                 "Craft",
-                "HandleAnimal",
+                "Handle Animal",
                 "Heal",
                 "Intimidate",
                 "Knowledge-Dungeoneering",
@@ -477,7 +477,7 @@
                 "Diplomacy",
                 "DisableDevice",
                 "Disguise",
-                "EscapeArtist",
+                "Escape Artist",
                 "Intimidate",
                 "Knowledge-Dungeoneering",
                 "Knowledge-Local",
@@ -485,11 +485,11 @@
                 "Perceptions",
                 "Perform",
                 "Profession",
-                "SenseMotive",
-                "SleightofHand",
+                "Sense Motive",
+                "Sleight of Hand",
                 "Stealth",
                 "Swim",
-                "UseMagicDevice"
+                "Use Magic Device"
             ],
             "Hit": "d8",
             "skillrank": 8,
@@ -530,7 +530,7 @@
                 "Knowledge",
                 "Profession",
                 "Spellcraft",
-                "UseMagicDevice"
+                "Use Magic Device"
             ],
             "Hit": "d6",
             "skillrank": 2,
