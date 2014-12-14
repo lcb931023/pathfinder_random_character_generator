@@ -12,6 +12,11 @@ angular.module('character', ['diceParser'])
       }
     );
 
+    $http.get('json/shared.json')
+      .then(function(res){
+        this.sharedJson = res.data;
+      }
+    );
 		// HELPER
     // Inclusive min, exclusive max
 		var randomInt = function(min, max){
@@ -54,7 +59,7 @@ angular.module('character', ['diceParser'])
 
       // From Classes
       this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
-
+      this.shared = sharedJson;
 
       // Skills
       this.skillRank = this.attributeMods.int + this.class.skillrank; //how many skill points you get per level
@@ -102,6 +107,7 @@ angular.module('character', ['diceParser'])
         tLevel.refsaves = this.class.refsaves[i];
         tLevel.willsaves = this.class.willsaves[i];
         //BAB
+        tLevel.BAB = this.shared.BAB[this.class.BAB][i];
         //ability points
         //free feats
         //available skill ranks
@@ -129,5 +135,7 @@ angular.module('character', ['diceParser'])
       this.fortsaves = this.levels[iLevel].fortsaves;
       this.refsaves = this.levels[iLevel].refsaves;
       this.willsaves = this.levels[iLevel].willsaves;
+
+      this.BAB = this.levels[iLevel].BAB;
     };
   }]);
