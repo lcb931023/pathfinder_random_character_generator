@@ -17,8 +17,8 @@ angular.module('character', ['diceParser'])
         this.sharedJson = res.data;
       }
     );
-    function inArray(target, list) 
-    { 
+    function inArray(target, list)
+    {
         var inArray=false;
         for(var i=0;i<list.length;i++)
         {
@@ -151,4 +151,9 @@ angular.module('character', ['diceParser'])
       $scope.character.freefeats_total = $scope.character.levels[iLevel].freefeats_total;
       $scope.character.skillranks_total = $scope.character.levels[iLevel].skillranks_total;
     };
+
+    this.addAbilityPoints = function addAbilityPoints(pAbilityName) {
+      $scope.character.attributeScores[pAbilityName] ++;
+      $scope.character.abilitypoints_total --;
+    }
   }]);
