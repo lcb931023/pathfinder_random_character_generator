@@ -126,9 +126,9 @@ angular.module('character', ['diceParser'])
 
         //skill ranks
         tLevel.skillRanks = angular.copy(this.skillRanks);
-        tLevel.skillranks_total =
+        tLevel.skillRanks_total =
                   i*(this.class.skillrank+this.attributeMods.int);
-        tLevel.skillranks_used = 0;
+        tLevel.skillRanks_used = 0;
 
         tLevel.skillranks_max = i+4;
         tLevel.skillranks_crossclass_max = Math.floor((i+4)/2);
@@ -172,10 +172,10 @@ angular.module('character', ['diceParser'])
             $scope.character.levels[iLevel].abilitypoints_total;
       $scope.character.freefeats_total =
             $scope.character.levels[iLevel].freefeats_total;
-      $scope.character.skillranks_total =
-            $scope.character.levels[iLevel].skillranks_total;
+      $scope.character.skillRanks_total =
+            $scope.character.levels[iLevel].skillRanks_total;
       $scope.character.skillRanks = angular.copy($scope.character.levels[iLevel].skillRanks);
-      $scope.character.skillranks_used = $scope.character.levels[iLevel].skillranks_used;
+      $scope.character.skillRanks_used = $scope.character.levels[iLevel].skillRanks_used;
 
       $scope.character.hp = $scope.character.levels[iLevel].hp;
 
