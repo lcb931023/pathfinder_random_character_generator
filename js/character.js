@@ -125,7 +125,7 @@ angular.module('character', ['diceParser'])
         tLevel.freefeats_total = Math.floor((i+2)/2);//todo:fighter,human
 
         //skill ranks
-        tLevel.skillranks = this.skillRanks;
+        tLevel.skillRanks = angular.copy(this.skillRanks);
         tLevel.skillranks_total =
                   i*(this.class.skillrank+this.attributeMods.int);
         tLevel.skillranks_used = 0;
@@ -150,14 +150,12 @@ angular.module('character', ['diceParser'])
       }
     };
 
-    // Fires everytime the Level needs recalculate
-    this.updateLevels = function updateLevels() {
+    // Fires everytime the Levels after curLevel needs recalculate
+    this.updateLevels = function updateLevels(callback) {
       var iLevel = $scope.character.curLevel - 1;
       // Only recalculate the current level and levels above it
       for (var i = iLevel; i < $scope.character.levels.length; i++) {
-        // Copy the object so we don't create a reference
-        angular.copy($scope.character.attributeScores, $scope.character.levels[i].attributeScores);
-        $scope.character.levels[i].abilitypoints_used = $scope.character.abilitypoints_used;
+        callback(i);
       }
     };
 
@@ -176,26 +174,28 @@ angular.module('character', ['diceParser'])
             $scope.character.levels[iLevel].freefeats_total;
       $scope.character.skillranks_total =
             $scope.character.levels[iLevel].skillranks_total;
-      $scope.character.skillranks = $scope.character.levels[iLevel].skillranks;
+      $scope.character.skillRanks = angular.copy($scope.character.levels[iLevel].skillRanks);
       $scope.character.skillranks_used = $scope.character.levels[iLevel].skillranks_used;
 
       $scope.character.hp = $scope.character.levels[iLevel].hp;
 
       // Ability scores and the related
       $scope.character.abilitypoints_used = $scope.character.levels[iLevel].abilitypoints_used;
-      angular.copy($scope.character.levels[iLevel].attributeScores, $scope.character.attributeScores);
+      $scope.character.attributeScores = angular.copy($scope.character.levels[iLevel].attributeScores);
     };
 
     this.addAbilityPoints = function addAbilityPoints(pAbilityName) {
-      $scope.character.attributeScores[pAbilityName] ++;
-      $scope.character.abilitypoints_used ++;
-      $scope.character.updateLevels();
+      $scope.character.updateLevels(function(i){
+        $scope.character.levels[i].attributeScores[pAbilityName] ++;
+        $scope.character.levels[i].abilitypoints_used ++;
+      });
+      $scope.character.updateCharacterFromLevels();
     }
     this.skill_up = function skill_up(skill_name) {
-      var l = $scope.character.curLevel - 1;
-
-      $scope.character.levels[l].skillranks[skill_name] ++;
-      $scope.character.levels[l].skillranks_used ++;
-      $scope.character.updateLevels();
+      $scope.character.updateLevels(function(i){
+        $scope.character.levels[i].skillRanks[skill_name] ++;
+        $scope.character.levels[i].skillRanks_used ++;
+      });
+      $scope.character.updateCharacterFromLevels();
     }
   }]);
