@@ -90,7 +90,7 @@
           <legend>Attributes</legend>
           <div class="small-2 columns">
             <label> Level
-              <input type="number" ng-model="character.curLevel" ng-change="character.updateLevels()" min="1" max="20"/>
+              <input type="number" ng-model="character.curLevel" ng-change="character.updateCharacterFromLevels()" min="1" max="20"/>
             </label>
           </div>
           <div class="small-2 columns">
@@ -120,7 +120,7 @@
               <label class="inline">Name</label>
             </div>
             <div class="small-2 column">
-              <label class="inline">Score (remaining: <span>{{character.abilitypoints_total}}</span>)</label>
+              <label class="inline">Score (remaining: <span>{{character.abilitypoints_total - character.abilitypoints_used}}</span>)</label>
             </div>
             <div class="small-2 column">
               <label class="inline">Modifier</label>
@@ -132,7 +132,7 @@
             </div>
             <div class="small-2 column">
               <span> {{character.attributeScores.str}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('str')" ng-show="character.abilitypoints_total">Add</button>
+              <button class="tiny" ng-click="character.addAbilityPoints('str')" ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.str"/>
@@ -144,7 +144,7 @@
             </div>
             <div class="small-2 column">
               <span> {{character.attributeScores.dex}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('dex')" ng-show="character.abilitypoints_total">Add</button>
+              <button class="tiny" ng-click="character.addAbilityPoints('dex')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.dex"/>
@@ -156,7 +156,7 @@
             </div>
             <div class="small-2 column">
               <span> {{character.attributeScores.con}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('con')" ng-show="character.abilitypoints_total">Add</button>
+              <button class="tiny" ng-click="character.addAbilityPoints('con')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.con"/>
@@ -168,7 +168,7 @@
             </div>
             <div class="small-2 column">
               <span> {{character.attributeScores.int}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('int')" ng-show="character.abilitypoints_total">Add</button>
+              <button class="tiny" ng-click="character.addAbilityPoints('int')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.int"/>
@@ -180,7 +180,7 @@
             </div>
             <div class="small-2 column">
               <span> {{character.attributeScores.wis}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('wis')" ng-show="character.abilitypoints_total">Add</button>
+              <button class="tiny" ng-click="character.addAbilityPoints('wis')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.wis"/>
@@ -192,7 +192,7 @@
             </div>
             <div class="small-2 column">
               <span> {{character.attributeScores.cha}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('cha')" ng-show="character.abilitypoints_total">Add</button>
+              <button class="tiny" ng-click="character.addAbilityPoints('cha')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.cha"/>

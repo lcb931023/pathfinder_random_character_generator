@@ -52,9 +52,9 @@ angular.module('character', ['diceParser'])
       // From Races
       this.race = raceJson.races[randomInt(0, raceJson.races.length)];
       this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
-      this.height = this.race.height[this.gender + "base"] + 
+      this.height = this.race.height[this.gender + "base"] +
                     diceParser.roll(this.race.height[this.gender + "mod"]);
-      this.weight = this.race.weight[this.gender + "base"] + 
+      this.weight = this.race.weight[this.gender + "base"] +
                     diceParser.roll(this.race.weight[this.gender + "mod"]);
       this.attributeMods =
       {
@@ -100,7 +100,7 @@ angular.module('character', ['diceParser'])
       this.traits = this.race.traits.slice();
 
       this.generateLevels();
-      this.applyLevel();
+      this.updateCharacterFromLevels();
     };
 
     // Initiate all 20 levels with the current attributes
@@ -116,6 +116,8 @@ angular.module('character', ['diceParser'])
         tLevel.BAB = this.shared.BAB[this.class.BAB][i];
         //ability points
         tLevel.abilitypoints_total = Math.floor((i+1)/4);
+        tLevel.abilitypoints_used = 0;
+        tLevel.attributeScores = this.attributeScores;
         //free feats
         tLevel.freefeats_total = Math.floor((i+2)/2);//todo:fighter,human
         //available skill ranks
@@ -138,18 +140,17 @@ angular.module('character', ['diceParser'])
     };
 
     // Fires everytime the Level needs recalculate
-    // easiest way is to fire it for every level change
-    // and every manual field change
     this.updateLevels = function updateLevels() {
-      // Do tha calculation
-      // apply back to character
-      this.applyLevel();
+      var iLevel = $scope.character.curLevel - 1;
+      // Only recalculate the current level and levels above it
+      for (var i = iLevel; i < $scope.character.levels.length; i++) {
+        $scope.character.levels[i].attributeScores = $scope.character.attributeScores;
+        $scope.character.levels[i].abilitypoints_used = $scope.character.abilitypoints_used;
+      }
     };
 
     // Apply the level of choice to character's object variables,
-    // so view can access them without worrying about the level
-    this.applyLevel = function applyLevel() {
-      //console.log(this.levels[iLevel].fortsaves);
+    this.updateCharacterFromLevels = function updateCharacterFromLevels() {
       var iLevel = $scope.character.curLevel - 1;
       $scope.character.fortsaves = $scope.character.levels[iLevel].fortsaves;
       $scope.character.refsaves = $scope.character.levels[iLevel].refsaves;
@@ -157,18 +158,26 @@ angular.module('character', ['diceParser'])
 
       $scope.character.BAB = $scope.character.levels[iLevel].BAB;
 
-      $scope.character.abilitypoints_total = 
+      $scope.character.abilitypoints_total =
             $scope.character.levels[iLevel].abilitypoints_total;
-      $scope.character.freefeats_total = 
+      $scope.character.freefeats_total =
             $scope.character.levels[iLevel].freefeats_total;
-      $scope.character.skillranks_total = 
+      $scope.character.skillranks_total =
             $scope.character.levels[iLevel].skillranks_total;
 
       $scope.character.hp = $scope.character.levels[iLevel].hp;
+
+      // Ability scores and the related
+      $scope.character.abilitypoints_used = $scope.character.levels[iLevel].abilitypoints_used;
+      $scope.character.attributeScores = $scope.character.levels[iLevel].attributeScores;
     };
 
     this.addAbilityPoints = function addAbilityPoints(pAbilityName) {
       $scope.character.attributeScores[pAbilityName] ++;
-      $scope.character.abilitypoints_total --;
+      $scope.character.abilitypoints_used ++;
+      $scope.character.updateLevels();
+      for (var i = 0; i < $scope.character.levels.length; i++) {
+        console.log($scope.character.levels[i].attributeScores);
+      }
     }
   }]);
