@@ -176,14 +176,8 @@ angular.module('character', ['diceParser'])
     };
 
     this.addAbilityPoints = function addAbilityPoints(pAbilityName) {
-      for (var i = 0; i < $scope.character.levels.length; i++) {
-        console.log($scope.character.levels[i].attributeScores);
-      }
       $scope.character.attributeScores[pAbilityName] ++;
       $scope.character.abilitypoints_used ++;
       $scope.character.updateLevels();
-      for (var i = 0; i < $scope.character.levels.length; i++) {
-        console.log($scope.character.levels[i].attributeScores);
-      }
     }
   }]);
