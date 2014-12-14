@@ -51,9 +51,11 @@ angular.module('character', ['diceParser'])
 
       // From Races
       this.race = raceJson.races[randomInt(0, raceJson.races.length)];
-                        this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
-                        this.height = this.race.height[this.gender + "base"] + diceParser.roll(this.race.height[this.gender + "mod"]);
-                        this.weight = this.race.weight[this.gender + "base"] + diceParser.roll(this.race.weight[this.gender + "mod"]);
+      this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
+      this.height = this.race.height[this.gender + "base"] + 
+                    diceParser.roll(this.race.height[this.gender + "mod"]);
+      this.weight = this.race.weight[this.gender + "base"] + 
+                    diceParser.roll(this.race.weight[this.gender + "mod"]);
       this.attributeMods =
       {
         "str":0, "dex":0, "con":0, "int":0, "wis":0, "cha":0,
@@ -122,7 +124,13 @@ angular.module('character', ['diceParser'])
         //spells per day
         //spells known
         //hit points
+        tLevel.hp = diceParser.roll_max(this.class.Hit);
+        if i > 0:
+          tLevel.hp = $scope.character.levels[i-1].hp +
+                      diceParser.roll(this.class.Hit);
+
         //todo: feats and traits granted by class per level
+
         $scope.character.levels.push(tLevel);
       }
     };
@@ -147,9 +155,14 @@ angular.module('character', ['diceParser'])
 
       $scope.character.BAB = $scope.character.levels[iLevel].BAB;
 
-      $scope.character.abilitypoints_total = $scope.character.levels[iLevel].abilitypoints_total;
-      $scope.character.freefeats_total = $scope.character.levels[iLevel].freefeats_total;
-      $scope.character.skillranks_total = $scope.character.levels[iLevel].skillranks_total;
+      $scope.character.abilitypoints_total = 
+            $scope.character.levels[iLevel].abilitypoints_total;
+      $scope.character.freefeats_total = 
+            $scope.character.levels[iLevel].freefeats_total;
+      $scope.character.skillranks_total = 
+            $scope.character.levels[iLevel].skillranks_total;
+
+      $scope.character.hp = $scope.character.levels[iLevel].hp;
     };
 
     this.addAbilityPoints = function addAbilityPoints(pAbilityName) {
