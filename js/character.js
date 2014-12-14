@@ -124,10 +124,12 @@ angular.module('character', ['diceParser'])
         //spells per day
         //spells known
         //hit points
-        tLevel.hp = diceParser.roll_max(this.class.Hit);
-        if i > 0:
+        if (i == 0) { tLevel.hp = diceParser.roll_max(this.class.Hit);}
+        else
+        {
           tLevel.hp = $scope.character.levels[i-1].hp +
                       diceParser.roll(this.class.Hit);
+        }
 
         //todo: feats and traits granted by class per level
 
