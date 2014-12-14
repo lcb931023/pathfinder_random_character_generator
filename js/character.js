@@ -17,6 +17,15 @@ angular.module('character', ['diceParser'])
         this.sharedJson = res.data;
       }
     );
+    function inArray(target, list) 
+    { 
+        var inArray=false;
+        for(var i=0;i<list.length;i++)
+        {
+            if(list[i]===target){inArray=true;}
+        }
+        return inArray;
+    };
 		// HELPER
     // Inclusive min, exclusive max
 		var randomInt = function(min, max){
@@ -61,10 +70,6 @@ angular.module('character', ['diceParser'])
       this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
       this.shared = sharedJson;
 
-      // Skills
-      this.skillRank = this.attributeMods.int + this.class.skillrank; //how many skill points you get per level
-      this.skills = [];
-      this.skills = this.class.Skills.slice();//gives an array
 
       // [TODO] necessary refinements for skill?
       // [TODO] Feat
@@ -72,18 +77,18 @@ angular.module('character', ['diceParser'])
       this.feats = this.race.bonusfeats.slice();
       //racial feats are available to the player,
       //but not given to them by default - only bonus feats are
-      this.restrictedfeats = []
+      this.restrictedfeats = [];
 
-			// Skills and Feat
-			this.skillRank = this.attributeMods.int + this.class.skillrank;
-			this.skills = [];
-			var skillBuffer = [];
-			skillBuffer = this.class.Skills.slice();
-			// Number of skill cannot exceed amount of choices
-			var skillAmount = (skillBuffer.length>this.skillRank) ? this.skillRank : skillBuffer.length;
-			for (var i=0; i<skillAmount; i++) {
-				var iSkill = randomInt(0, skillBuffer.length);
-				this.skills.push(skillBuffer.splice(iSkill, 1)[0]);
+			// Skills
+			this.classSkills = {};
+			this.skillRanks = {};
+			var tclassSkills = this.class.Skills.slice();//gives an array
+
+			// put in dictionary
+			for (var i=0; i<this.shared.skills.length; i++) {
+        var key = this.shared.skills[i].name;
+				this.classSkills[key] = inArray(key, tclassSkills);
+				this.skillRanks[key] = 0;
 			}
 			// [TODO] necessary refinements for skill?
 			// [TODO] Feat
