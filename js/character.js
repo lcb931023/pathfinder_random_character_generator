@@ -179,6 +179,7 @@ angular.module('character', ['diceParser'])
             $scope.character.levels[iLevel].skillRanks_total;
       $scope.character.skillRanks = angular.copy($scope.character.levels[iLevel].skillRanks);
       $scope.character.skillRanks_used = $scope.character.levels[iLevel].skillRanks_used;
+      $scope.character.skillranks_max = $scope.character.levels[iLevel].skillranks_max;
 
       $scope.character.hp = $scope.character.levels[iLevel].hp;
 
@@ -196,8 +197,11 @@ angular.module('character', ['diceParser'])
     }
     this.skill_up = function skill_up(skill_name) {
       $scope.character.updateLevels(function(i){
-        $scope.character.levels[i].skillRanks[skill_name] ++;
-        $scope.character.levels[i].skillRanks_used ++;
+          $scope.character.levels[i].skillRanks[skill_name] ++;
+          $scope.character.levels[i].skillRanks_used ++;
+
+          if (!$scope.character.classSkills[skill_name])
+              $scope.character.levels[i].skillRanks_used ++;
       });
       $scope.character.updateCharacterFromLevels();
     }

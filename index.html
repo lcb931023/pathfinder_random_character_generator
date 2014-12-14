@@ -240,7 +240,7 @@
                   <legend>Skills</legend>
                     <span ng-repeat="skill in character.shared.skills" class="small-4 columns">
                         <input type="checkbox" ng-model="character.classSkills[skill.name]">{{skill.name}}: {{character.skillRanks[skill.name]}}
-                        <button class="tiny" ng-click="character.skill_up(skill.name)" ng-show="character.skillRanks_total - character.skillRanks_used">Add</button></span>
+                        <button class="tiny" ng-click="character.skill_up(skill.name)" ng-show="((character.skillRanks_total - character.skillRanks_used && character.classSkills[skill.name]) || character.skillRanks_total-character.skillRanks_used > 1) && character.skillRanks[skill.name]<character.skillranks_max">Add</button></span>
                     <span class="small-4 columns">Available Points: {{character.skillRanks_total - character.skillRanks_used}}</span>
                 </fieldset>
             </div>
