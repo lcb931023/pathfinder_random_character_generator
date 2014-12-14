@@ -135,7 +135,7 @@
               <button class="tiny" ng-click="character.addAbilityPoints('str')" ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.attributeMods.str"/>
+              <span> {{character.attributeMods.str}}<span/>
             </div>
           </div>
           <div class="row">
@@ -147,7 +147,7 @@
               <button class="tiny" ng-click="character.addAbilityPoints('dex')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.attributeMods.dex"/>
+              <span> {{character.attributeMods.dex}}<span/>
             </div>
           </div>
           <div class="row">
@@ -159,7 +159,7 @@
               <button class="tiny" ng-click="character.addAbilityPoints('con')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.attributeMods.con"/>
+              <span> {{character.attributeMods.con}}<span/>
             </div>
           </div>
           <div class="row">
@@ -171,7 +171,7 @@
               <button class="tiny" ng-click="character.addAbilityPoints('int')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.attributeMods.int"/>
+              <span> {{character.attributeMods.int}}<span/>
             </div>
           </div>
           <div class="row">
@@ -183,7 +183,7 @@
               <button class="tiny" ng-click="character.addAbilityPoints('wis')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.attributeMods.wis"/>
+              <span> {{character.attributeMods.wis}}<span/>
             </div>
           </div>
           <div class="row">
@@ -195,7 +195,7 @@
               <button class="tiny" ng-click="character.addAbilityPoints('cha')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.attributeMods.cha"/>
+              <span> {{character.attributeMods.cha}}<span/>
             </div>
           </div>
           <div class="row">
@@ -239,7 +239,7 @@
                 <fieldset>
                   <legend>Skills</legend>
                     <span ng-repeat="skill in character.shared.skills" class="small-4 columns">
-                        <input type="checkbox" ng-model="character.classSkills[skill.name]">{{skill.name}}: {{character.skillRanks[skill.name]}} 
+                        <input type="checkbox" ng-model="character.classSkills[skill.name]">{{skill.name}}: {{character.skillRanks[skill.name]}}
                         <button class="tiny" ng-click="character.skill_up(skill.name)" ng-show="character.skillranks_total - character.skillranks_used">Add</button></span>
                     <span class="small-4 columns">Available Points: {{character.skillranks_total}}</span>
                 </fieldset>
