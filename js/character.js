@@ -120,11 +120,19 @@ angular.module('character', ['diceParser'])
         tLevel.attributeScores = this.attributeScores;
         //free feats
         tLevel.freefeats_total = Math.floor((i+2)/2);//todo:fighter,human
-        //available skill ranks
+
+        //skill ranks
+        tLevel.skillranks = this.skillRanks;
         tLevel.skillranks_total =
                   i*(this.class.skillrank+this.attributeMods.int);
+        tLevel.skillranks_used = 0;
+
+        tLevel.skillranks_max = i+4;
+        tLevel.skillranks_crossclass_max = Math.floor((i+4)/2);
+
         //spells per day
         //spells known
+
         //hit points
         if (i == 0) { tLevel.hp = diceParser.roll_max("1"+this.class.Hit);}
         else
@@ -164,6 +172,8 @@ angular.module('character', ['diceParser'])
             $scope.character.levels[iLevel].freefeats_total;
       $scope.character.skillranks_total =
             $scope.character.levels[iLevel].skillranks_total;
+      $scope.character.skillranks = $scope.character.levels[iLevel].skillranks;
+      $scope.character.skillranks_used = $scope.character.levels[iLevel].skillranks_used;
 
       $scope.character.hp = $scope.character.levels[iLevel].hp;
 
@@ -179,5 +189,12 @@ angular.module('character', ['diceParser'])
       for (var i = 0; i < $scope.character.levels.length; i++) {
         console.log($scope.character.levels[i].attributeScores);
       }
+    }
+    this.skill_up = function skill_up(skill_name) {
+      var l = $scope.character.curLevel - 1;
+
+      $scope.character.levels[l].skillranks[skill_name] ++;
+      $scope.character.levels[l].skillranks_used ++;
+      $scope.character.updateLevels();
     }
   }]);
