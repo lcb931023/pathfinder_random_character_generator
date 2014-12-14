@@ -71,8 +71,7 @@ angular.module('character', ['diceParser'])
       this.feats = [];
       this.feats = this.race.bonusfeats.slice();
       //racial feats are available to the player,
-      //but not given to them by default
-      this.freefeats = 0;//(this.level+1)/2
+      //but not given to them by default - only bonus feats are
       this.restrictedfeats = []
 
 			// Skills and Feat
@@ -109,9 +108,9 @@ angular.module('character', ['diceParser'])
         //BAB
         tLevel.BAB = this.shared.BAB[this.class.BAB][i];
         //ability points
-        tLevel.abilitypoints_total = i/4;
+        tLevel.abilitypoints_total = math.floor((i+1)/4);
         //free feats
-        tLevel.freefeats_total = (i+1)/2;//todo:fighter,human
+        tLevel.freefeats_total = math.floor((i+2)/2);//todo:fighter,human
         //available skill ranks
         tLevel.skillranks_total = 
                   i*(this.class.skillrank+this.attributeMods.int);
