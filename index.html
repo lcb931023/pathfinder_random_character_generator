@@ -90,7 +90,7 @@
           <legend>Attributes</legend>
           <div class="small-2 columns">
             <label> Level
-              <input type="number" ng-model="character.curLevel"/>
+              <input type="number" ng-model="character.curLevel" ng-change="character.updateLevels()"/>
             </label>
           </div>
           <div class="small-2 columns">

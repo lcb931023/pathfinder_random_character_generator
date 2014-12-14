@@ -93,12 +93,12 @@ angular.module('character', ['diceParser'])
       this.traits = this.race.traits.slice();
 
       this.generateLevels();
-      this.applyLevel(this.curLevel);
+      this.applyLevel();
     };
 
     // Initiate all 20 levels with the current attributes
     this.generateLevels = function generateLevels() {
-      this.levels = [];
+      $scope.character.levels = [];
       for (var i = 0; i < 20; i ++) {
         var tLevel = {};
         //saves
@@ -118,7 +118,7 @@ angular.module('character', ['diceParser'])
         //spells known
         //hit points
         //todo: feats and traits granted by class per level
-        this.levels.push(tLevel);
+        $scope.character.levels.push(tLevel);
       }
     };
 
@@ -128,22 +128,22 @@ angular.module('character', ['diceParser'])
     this.updateLevels = function updateLevels() {
       // Do tha calculation
       // apply back to character
-      this.applyLevel(this.curlevel);
+      this.applyLevel();
     };
 
     // Apply the level of choice to character's object variables,
     // so view can access them without worrying about the level
-    this.applyLevel = function applyLevel(pLevel) {
-      var iLevel = pLevel - 1;
-      this.fortsaves = this.levels[iLevel].fortsaves;
-      this.refsaves = this.levels[iLevel].refsaves;
-      this.willsaves = this.levels[iLevel].willsaves;
+    this.applyLevel = function applyLevel() {
+      //console.log(this.levels[iLevel].fortsaves);
+      var iLevel = $scope.character.curLevel - 1;
+      $scope.character.fortsaves = $scope.character.levels[iLevel].fortsaves;
+      $scope.character.refsaves = $scope.character.levels[iLevel].refsaves;
+      $scope.character.willsaves = $scope.character.levels[iLevel].willsaves;
 
-      this.BAB = this.levels[iLevel].BAB;
+      $scope.character.BAB = $scope.character.levels[iLevel].BAB;
 
-      this.abilitypoints_total = this.levels[iLevel].abilitypoints_total;
-      console.log(this.abilitypoints_total);
-      this.freefeats_total = this.levels[iLevel].freefeats_total;
-      this.skillranks_total = this.levels[iLevel].skillranks_total;
+      $scope.character.abilitypoints_total = $scope.character.levels[iLevel].abilitypoints_total;
+      $scope.character.freefeats_total = $scope.character.levels[iLevel].freefeats_total;
+      $scope.character.skillranks_total = $scope.character.levels[iLevel].skillranks_total;
     };
   }]);
