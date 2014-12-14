@@ -1,3 +1,4 @@
+// Dear future developer, sorry for style inconsistency
 angular.module('character', ['diceParser'])
   .controller('CharacterController', ['diceParser', '$scope', '$http', function(diceParser, $scope, $http) {
 
