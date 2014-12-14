@@ -108,9 +108,9 @@ angular.module('character', ['diceParser'])
         //BAB
         tLevel.BAB = this.shared.BAB[this.class.BAB][i];
         //ability points
-        tLevel.abilitypoints_total = math.floor((i+1)/4);
+        tLevel.abilitypoints_total = Math.floor((i+1)/4);
         //free feats
-        tLevel.freefeats_total = math.floor((i+2)/2);//todo:fighter,human
+        tLevel.freefeats_total = Math.floor((i+2)/2);//todo:fighter,human
         //available skill ranks
         tLevel.skillranks_total =
                   i*(this.class.skillrank+this.attributeMods.int);
