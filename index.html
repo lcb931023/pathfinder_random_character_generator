@@ -35,7 +35,7 @@
       <div id="char-info" class="row">
         <fieldset>
           <legend>Character Info</legend>
-                    <div class="small-6 medium-3 columns">
+          <div class="small-6 medium-3 columns">
             <label> Name
               <input type="text" ng-model="character.name"/>
             </label>
@@ -114,15 +114,16 @@
             </label>
           </div>
 
+          <legend>Ability Scores</legend>
           <div class="row">
             <div class="small-4 columns">
-              <label class="inline">Ability Name</label>
+              <label class="inline">Name</label>
             </div>
             <div class="small-2 column">
-              <label class="inline">Ability Score</label>
+              <label class="inline">Score</label>
             </div>
             <div class="small-2 column">
-              <label class="inline">Ability Modifier</label>
+              <label class="inline">Modifier</label>
             </div>
           </div>
           <div class="row">
@@ -130,7 +131,7 @@
               <label class="inline">Strength</label>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.str" />
+              <input type="number" ng-model="character.attributeScores.str" />
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.str"/>
@@ -141,7 +142,7 @@
               <label class="inline">Dexterity</label>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.dex" />
+              <input type="number" ng-model="character.attributeScores.dex" />
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.dex"/>
@@ -152,7 +153,7 @@
               <label class="inline">Constitution</label>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.con" />
+              <input type="number" ng-model="character.attributeScores.con" />
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.con"/>
@@ -163,7 +164,7 @@
               <label class="inline">Intelligence</label>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.int" />
+              <input type="number" ng-model="character.attributeScores.int" />
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.int"/>
@@ -174,7 +175,7 @@
               <label class="inline">Wisdom</label>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.wis" />
+              <input type="number" ng-model="character.attributeScores.wis" />
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.wis"/>
@@ -185,7 +186,7 @@
               <label class="inline">Charisma</label>
             </div>
             <div class="small-2 column">
-              <input type="number" ng-model="character.cha" />
+              <input type="number" ng-model="character.attributeScores.cha" />
             </div>
             <div class="small-2 column">
               <input type="number" ng-model="character.attributeMods.cha"/>
