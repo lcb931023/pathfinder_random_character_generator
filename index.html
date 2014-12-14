@@ -238,7 +238,9 @@
             <div id="skills" class="row">
                 <fieldset>
                   <legend>Skills</legend>
-                    <span ng-repeat="skill in character.shared.skills" class="small-4 columns"><input type="checkbox" ng-model="character.classSkills[skill.name]">{{skill.name}}: {{character.skillRanks[skill.name]}}</span>
+                    <span ng-repeat="skill in character.shared.skills" class="small-4 columns">
+                        <input type="checkbox" ng-model="character.classSkills[skill.name]">{{skill.name}}: {{character.skillRanks[skill.name]}} 
+                        <button class="tiny" ng-click="character.skill_up(skill.name)" ng-show="character.skillranks_total - character.skillranks_used">Add</button></span>
                     <span class="small-4 columns">Available Points: {{character.skillranks_total}}</span>
                 </fieldset>
             </div>
