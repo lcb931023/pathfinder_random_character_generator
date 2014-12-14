@@ -112,7 +112,7 @@ angular.module('character', ['diceParser'])
         //free feats
         tLevel.freefeats_total = math.floor((i+2)/2);//todo:fighter,human
         //available skill ranks
-        tLevel.skillranks_total = 
+        tLevel.skillranks_total =
                   i*(this.class.skillrank+this.attributeMods.int);
         //spells per day
         //spells known
@@ -142,6 +142,7 @@ angular.module('character', ['diceParser'])
       this.BAB = this.levels[iLevel].BAB;
 
       this.abilitypoints_total = this.levels[iLevel].abilitypoints_total;
+      console.log(this.abilitypoints_total);
       this.freefeats_total = this.levels[iLevel].freefeats_total;
       this.skillranks_total = this.levels[iLevel].skillranks_total;
     };
