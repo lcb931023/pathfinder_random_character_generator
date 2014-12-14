@@ -122,7 +122,10 @@ angular.module('character', ['diceParser'])
         tLevel.attributeScores = {};
         angular.copy(this.attributeScores, tLevel.attributeScores);
         //free feats
-        tLevel.freefeats_total = Math.floor((i+2)/2);//todo:fighter,human
+        tLevel.freefeats_total = Math.floor((i+2)/2);//todo:fighter
+        for (var trait in this.traits)
+          if (this.traits[trait].name == "Bonus Feat")
+            tLevel.freefeats_total += 1;
 
         //skill ranks
         tLevel.skillranks = this.skillRanks;
