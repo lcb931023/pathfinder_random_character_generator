@@ -238,11 +238,7 @@
             <div id="skills" class="row">
                 <fieldset>
                   <legend>Skills</legend>
-                    <ul>
-                        <li ng-repeat="skill in character.skills">
-                            <span>{{skill}}</span>
-                        </li>
-                    </ul>
+                    <label ng-repeat="skill in character.shared.skills"><input type="checkbox" ng-model="character.classSkills[skill.name]">{{skill.name}} <input type="number" ng-model="character.skillRanks[skill.name]"/></label>
                 </fieldset>
             </div>
             <div id="feats" class="row">
@@ -253,7 +249,7 @@
                             <span>{{feat}}</span>
                         </li>
                         <label>Free Feats:
-                            <input type="number" ng-model="character.freefeats" />
+                            <input type="number" ng-model="character.freefeats_total" />
                         </label>
                         <li ng-repeat="restricted in character.restrictedfeats">
                             <span>{{restricted}}</span>

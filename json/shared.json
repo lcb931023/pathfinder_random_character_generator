@@ -21,216 +21,216 @@
     
     
     "skills":
-    {
-        "Acrobatics":
+    [
         {
+            "name":"Acrobatics",
             "untrained":true,
             "ACP":true,
             "ability":"dex"
         },
-        "Appraise":
         {
+            "name":"Appraise",
             "untrained":true,
             "ACP":false,
             "ability":"int"
         },
-        "Bluff":
         {
+            "name":"Bluff",
             "untrained":true,
             "ACP":false,
             "ability":"cha"
         },
-        "Climb":
         {
+            "name":"Climb",
             "untrained":true,
             "ACP":true,
             "ability":"str"
         },
-        "Craft":
         {
+            "name":"Craft",
             "untrained":true,
             "ACP":false,
             "ability":"int"
         },
-        "Diplomacy":
         {
-            "untrained":true,
-            "ACP":false,
-            "ability":"cha"
-        },
-        "Disable Device":
-        {
-            "untrained":false,
-            "ACP":true,
-            "ability":"dex"
-        },
-        "Disguise":
-        {
+            "name":"Diplomacy",
             "untrained":true,
             "ACP":false,
             "ability":"cha"
         },
-        "Escape Artist":
         {
-            "untrained":true,
-            "ACP":true,
-            "ability":"dex"
-        },
-        "Fly":
-        {
-            "untrained":true,
-            "ACP":true,
-            "ability":"dex"
-        },
-        "Handle Animal":
-        {
+            "name":"Disable Device",
             "untrained":false,
-            "ACP":false,
-            "ability":"cha"
+            "ACP":true,
+            "ability":"dex"
         },
-        "Heal":
         {
-            "untrained":true,
-            "ACP":false,
-            "ability":"wis"
-        },
-        "Intimidate":
-        {
+            "name":"Disguise",
             "untrained":true,
             "ACP":false,
             "ability":"cha"
         },
-        "Knowledge(Arcana)":
         {
+            "name":"Escape Artist",
+            "untrained":true,
+            "ACP":true,
+            "ability":"dex"
+        },
+        {
+            "name":"Fly",
+            "untrained":true,
+            "ACP":true,
+            "ability":"dex"
+        },
+        {
+            "name":"Handle Animal",
             "untrained":false,
             "ACP":false,
-            "ability":"int"
+            "ability":"cha"
         },
-        "Knowledge(Dungeoneering)":
         {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Knowledge(Engineering)":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Knowledge(Geography)":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Knowledge(History)":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Knowledge(Local)":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Knowledge(Nature)":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Knowledge(Nobility)":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Knowledge(Planes)":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Knowledge(Religion)":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Linguistics":
-        {
-            "untrained":false,
-            "ACP":false,
-            "ability":"int"
-        },
-        "Perception":
-        {
+            "name":"Heal",
             "untrained":true,
             "ACP":false,
             "ability":"wis"
         },
-        "Perform":
         {
+            "name":"Intimidate",
             "untrained":true,
             "ACP":false,
             "ability":"cha"
         },
-        "Profession":
         {
-            "untrained":false,
-            "ACP":false,
-            "ability":"wis"
-        },
-        "Ride":
-        {
-            "untrained":true,
-            "ACP":true,
-            "ability":"dex"
-        },
-        "Sense Motive":
-        {
-            "untrained":true,
-            "ACP":false,
-            "ability":"wis"
-        },
-        "Sleight of Hand":
-        {
-            "untrained":false,
-            "ACP":true,
-            "ability":"dex"
-        },
-        "Spellcraft":
-        {
+            "name":"Knowledge(Arcana)",
             "untrained":false,
             "ACP":false,
             "ability":"int"
         },
-        "Stealth":
         {
-            "untrained":true,
-            "ACP":true,
-            "ability":"dex"
+            "name":"Knowledge(Dungeoneering)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
         },
-        "Survival":
         {
+            "name":"Knowledge(Engineering)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Knowledge(Geography)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Knowledge(History)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Knowledge(Local)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Knowledge(Nature)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Knowledge(Nobility)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Knowledge(Planes)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Knowledge(Religion)",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Linguistics",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Perception",
             "untrained":true,
             "ACP":false,
             "ability":"wis"
         },
-        "Swim":
         {
+            "name":"Perform",
+            "untrained":true,
+            "ACP":false,
+            "ability":"cha"
+        },
+        {
+            "name":"Profession",
+            "untrained":false,
+            "ACP":false,
+            "ability":"wis"
+        },
+        {
+            "name":"Ride",
+            "untrained":true,
+            "ACP":true,
+            "ability":"dex"
+        },
+        {
+            "name":"Sense Motive",
+            "untrained":true,
+            "ACP":false,
+            "ability":"wis"
+        },
+        {
+            "name":"Sleight of Hand",
+            "untrained":false,
+            "ACP":true,
+            "ability":"dex"
+        },
+        {
+            "name":"Spellcraft",
+            "untrained":false,
+            "ACP":false,
+            "ability":"int"
+        },
+        {
+            "name":"Stealth",
+            "untrained":true,
+            "ACP":true,
+            "ability":"dex"
+        },
+        {
+            "name":"Survival",
+            "untrained":true,
+            "ACP":false,
+            "ability":"wis"
+        },
+        {
+            "name":"Swim",
             "untrained":true,
             "ACP":true,
             "ability":"str"
         },
-        "Use Magic Device":
         {
+            "name":"Use Magic Device",
             "untrained":false,
             "ACP":false,
             "ability":"cha"
         }
-    }
+    ]
 }
