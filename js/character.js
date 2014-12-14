@@ -117,7 +117,9 @@ angular.module('character', ['diceParser'])
         //ability points
         tLevel.abilitypoints_total = Math.floor((i+1)/4);
         tLevel.abilitypoints_used = 0;
-        tLevel.attributeScores = this.attributeScores;
+        // Copy an object instead of referencing it
+        tLevel.attributeScores = {};
+        angular.copy(this.attributeScores, tLevel.attributeScores);
         //free feats
         tLevel.freefeats_total = Math.floor((i+2)/2);//todo:fighter,human
         //available skill ranks
@@ -144,7 +146,8 @@ angular.module('character', ['diceParser'])
       var iLevel = $scope.character.curLevel - 1;
       // Only recalculate the current level and levels above it
       for (var i = iLevel; i < $scope.character.levels.length; i++) {
-        $scope.character.levels[i].attributeScores = $scope.character.attributeScores;
+        // Copy the object so we don't create a reference
+        angular.copy($scope.character.attributeScores, $scope.character.levels[i].attributeScores);
         $scope.character.levels[i].abilitypoints_used = $scope.character.abilitypoints_used;
       }
     };
@@ -169,10 +172,13 @@ angular.module('character', ['diceParser'])
 
       // Ability scores and the related
       $scope.character.abilitypoints_used = $scope.character.levels[iLevel].abilitypoints_used;
-      $scope.character.attributeScores = $scope.character.levels[iLevel].attributeScores;
+      angular.copy($scope.character.levels[iLevel].attributeScores, $scope.character.attributeScores);
     };
 
     this.addAbilityPoints = function addAbilityPoints(pAbilityName) {
+      for (var i = 0; i < $scope.character.levels.length; i++) {
+        console.log($scope.character.levels[i].attributeScores);
+      }
       $scope.character.attributeScores[pAbilityName] ++;
       $scope.character.abilitypoints_used ++;
       $scope.character.updateLevels();
