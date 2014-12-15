@@ -73,6 +73,7 @@ angular.module('character', ['diceParser'])
       this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
       this.shared = sharedJson;
 
+      this.alignment = this.class.alignments[randomInt(0, this.class.alignments.length)];
 
       // [TODO] necessary refinements for skill?
       // [TODO] Feat
