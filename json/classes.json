@@ -157,7 +157,26 @@
             "archetypes": ["standard", "melee", "wiseMelee"],
             "spellmod":"wis",
             "spellsperday": [
-                
+                ["3","1+1","0","0","0","0","0","0","0","0"],
+				["4","2+1","0","0","0","0","0","0","0","0"],
+				["4","2+1","1+1","0","0","0","0","0","0","0"],
+				["4","3+1","2+1","0","0","0","0","0","0","0"],
+				["4","3+1","2+1","1+1","0","0","0","0","0","0"],
+				["4","3+1","3+1","2+1","0","0","0","0","0","0"],
+				["4","4+1","3+1","2+1","1+1","0","0","0","0","0"],
+				["4","4+1","3+1","3+1","2+1","0","0","0","0","0"],
+				["4","4+1","4+1","3+1","2+1","1+1","0","0","0","0"],
+				["4","4+1","4+1","3+1","3+1","2+1","0","0","0","0"],
+				["4","4+1","4+1","4+1","3+1","2+1","1+1","0","0","0"],
+				["4","4+1","4+1","4+1","3+1","3+1","2+1","0","0","0"],
+				["4","4+1","4+1","4+1","4+1","3+1","2+1","1+1","0","0"],
+				["4","4+1","4+1","4+1","4+1","3+1","3+1","2+1","0","0"],
+				["4","4+1","4+1","4+1","4+1","4+1","3+1","2+1","1+1","0"],
+				["4","4+1","4+1","4+1","4+1","4+1","3+1","3+1","2+1","0"],
+				["4","4+1","4+1","4+1","4+1","4+1","4+1","3+1","2+1","1+1"],
+				["4","4+1","4+1","4+1","4+1","4+1","4+1","3+1","3+1","2+1"],
+				["4","4+1","4+1","4+1","4+1","4+1","4+1","4+1","3+1","3+1"],
+				["4","4+1","4+1","4+1","4+1","4+1","4+1","4+1","4+1","4+1"]
             ]
         },
 
@@ -620,7 +639,29 @@
                 ["4","4","4","4","4","4","4","3","3","2"],
                 ["4","4","4","4","4","4","4","4","3","3"],
                 ["4","4","4","4","4","4","4","4","4","4"]
-            ]
+            ],
+			"spellsknown": [
+				["All Wizard level 0 spells + 3 first level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 2 of any 1st or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 4 of  2nd or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 6 of any 2nd or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 8 of any 3rd or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 10 of any 3rd or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 12 of any 4th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 14 of any 4th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 16 of any 5th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 18 of any 5th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 20 of any 6th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 22 of any 6th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 24 of any 7th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 26 of any 7th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 28 of any 8th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 30 of any 8th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 32 of any 9th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 34 of any 9th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 36 of any 9th or below level spells"],
+				["All Wizard level 0 spells + 3 first level spells + 38 of any 9th or below level spells"]
+			]
         }
     ]
 }
