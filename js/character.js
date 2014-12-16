@@ -38,13 +38,13 @@ angular.module('character', ['diceParser'])
       this.curLevel = Math.floor(Math.random() * 20 ) + 1;
 
       // Placeholder Values
-      this.attributeScores = {};
-      this.attributeScores.str = diceParser.roll("3d6");
-      this.attributeScores.dex = diceParser.roll("3d6");
-      this.attributeScores.con = diceParser.roll("3d6");
-      this.attributeScores.int = diceParser.roll("3d6");
-      this.attributeScores.wis = diceParser.roll("3d6");
-      this.attributeScores.cha = diceParser.roll("3d6");
+      this.abilityScores = {};
+      this.abilityScores.str = diceParser.roll("3d6");
+      this.abilityScores.dex = diceParser.roll("3d6");
+      this.abilityScores.con = diceParser.roll("3d6");
+      this.abilityScores.int = diceParser.roll("3d6");
+      this.abilityScores.wis = diceParser.roll("3d6");
+      this.abilityScores.cha = diceParser.roll("3d6");
 
 
       // Data independent data
@@ -57,16 +57,16 @@ angular.module('character', ['diceParser'])
                     diceParser.roll(this.race.height[this.gender + "mod"]);
       this.weight = this.race.weight[this.gender + "base"] +
                     diceParser.roll(this.race.weight[this.gender + "mod"]);
-      this.attributeMods =
+      this.ability_racialMods =
       {
         "str":0, "dex":0, "con":0, "int":0, "wis":0, "cha":0,
       };
       var pAbility = this.race.ability;
-      // Assign mods from json to attributes of attributeMods
+      // Assign mods from json to attributes of ability_racialMods
         // ugh vocabulary
       for(var i = 0; i < pAbility.length; i++){
         var tKey = Object.keys(pAbility[i]);
-        this.attributeMods[tKey] = pAbility[i][tKey];
+        this.ability_racialMods[tKey] = pAbility[i][tKey];
       }
 
       // From Classes
@@ -104,7 +104,21 @@ angular.module('character', ['diceParser'])
       this.generateLevels();
       this.updateCharacterFromLevels();
     };
-
+    this.abilityMods = function abilityMods() {
+      return {"str": Math.floor((this.abilityScores.str+
+                            this.ability_racialMods.str-10)/2), 
+              "dex": Math.floor((this.abilityScores.dex+
+                            this.ability_racialMods.dex-10)/2), 
+              "con": Math.floor((this.abilityScores.con+
+                            this.ability_racialMods.con-10)/2), 
+              "int": Math.floor((this.abilityScores.int+
+                            this.ability_racialMods.int-10)/2), 
+              "wis": Math.floor((this.abilityScores.wis+
+                            this.ability_racialMods.wis-10)/2), 
+              "cha": Math.floor((this.abilityScores.cha+
+                            this.ability_racialMods.cha-10)/2)};
+      console.log()
+    }
     // Initiate all 20 levels with the current attributes
     this.generateLevels = function generateLevels() {
       $scope.character.levels = [];
@@ -120,8 +134,8 @@ angular.module('character', ['diceParser'])
         tLevel.abilitypoints_total = Math.floor((i+1)/4);
         tLevel.abilitypoints_used = 0;
         // Copy an object instead of referencing it
-        tLevel.attributeScores = {};
-        angular.copy(this.attributeScores, tLevel.attributeScores);
+        tLevel.abilityScores = {};
+        angular.copy(this.abilityScores, tLevel.abilityScores);
         //free feats
         tLevel.freefeats_total = Math.floor((i+2)/2);//todo:fighter
         for (var trait in this.traits)
@@ -131,7 +145,7 @@ angular.module('character', ['diceParser'])
         //skill ranks
         tLevel.skillRanks = angular.copy(this.skillRanks);
         tLevel.skillRanks_total =
-                  i*(this.class.skillrank+this.attributeMods.int);
+                  i*(this.class.skillrank+this.abilityMods().int);
         tLevel.skillRanks_used = 0;
 
         tLevel.skillranks_max = i+4;
@@ -186,12 +200,12 @@ angular.module('character', ['diceParser'])
 
       // Ability scores and the related
       $scope.character.abilitypoints_used = $scope.character.levels[iLevel].abilitypoints_used;
-      $scope.character.attributeScores = angular.copy($scope.character.levels[iLevel].attributeScores);
+      $scope.character.abilityScores = angular.copy($scope.character.levels[iLevel].abilityScores);
     };
 
     this.addAbilityPoints = function addAbilityPoints(pAbilityName) {
       $scope.character.updateLevels(function(i){
-        $scope.character.levels[i].attributeScores[pAbilityName] ++;
+        $scope.character.levels[i].abilityScores[pAbilityName] ++;
         $scope.character.levels[i].abilitypoints_used ++;
       });
       $scope.character.updateCharacterFromLevels();

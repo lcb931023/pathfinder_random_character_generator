@@ -126,76 +126,16 @@
               <label class="inline">Modifier</label>
             </div>
           </div>
-          <div class="row">
+          <div class="row"  ng-repeat="ability in character.shared.abilities">
             <div class="small-4 columns">
-              <label class="inline">Strength</label>
+              <label class="inline">{{ability.name}}</label>
             </div>
             <div class="small-2 column">
-              <span> {{character.attributeScores.str}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('str')" ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
+              <span> {{character.abilityScores[ability.key]}} </span>
+              <button class="tiny" ng-click="character.addAbilityPoints(ability.key)" ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
-              <span> {{character.attributeMods.str}}<span/>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-4 columns">
-              <label class="inline">Dexterity</label>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeScores.dex}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('dex')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeMods.dex}}<span/>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-4 columns">
-              <label class="inline">Constitution</label>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeScores.con}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('con')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeMods.con}}<span/>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-4 columns">
-              <label class="inline">Intelligence</label>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeScores.int}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('int')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeMods.int}}<span/>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-4 columns">
-              <label class="inline">Wisdom</label>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeScores.wis}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('wis')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeMods.wis}}<span/>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-4 columns">
-              <label class="inline">Charisma</label>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeScores.cha}} </span>
-              <button class="tiny" ng-click="character.addAbilityPoints('cha')"ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
-            </div>
-            <div class="small-2 column">
-              <span> {{character.attributeMods.cha}}<span/>
+              <span> {{character.ability_racialMods[ability.key]}}<span/>
             </div>
           </div>
           <div class="row">
