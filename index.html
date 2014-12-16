@@ -116,26 +116,32 @@
 
           <legend>Ability Scores</legend>
           <div class="row">
-            <div class="small-4 columns">
+            <div class="small-3 columns">
               <label class="inline">Name</label>
             </div>
-            <div class="small-2 column">
+            <div class="small-3 column">
               <label class="inline">Score (remaining: <span>{{character.abilitypoints_total - character.abilitypoints_used}}</span>)</label>
             </div>
             <div class="small-2 column">
+              <label class="inline">Racial Modifier</label>
+            </div>
+            <div class="small-4 column">
               <label class="inline">Modifier</label>
             </div>
           </div>
           <div class="row"  ng-repeat="ability in character.shared.abilities">
-            <div class="small-4 columns">
+            <div class="small-3 columns">
               <label class="inline">{{ability.name}}</label>
             </div>
-            <div class="small-2 column">
-              <span> {{character.abilityScores[ability.key]}} </span>
+            <div class="small-3 column">
+              <span> {{character.abilityScores[ability.key]}}</span>
               <button class="tiny" ng-click="character.addAbilityPoints(ability.key)" ng-show="character.abilitypoints_total - character.abilitypoints_used">Add</button>
             </div>
             <div class="small-2 column">
               <span> {{character.ability_racialMods[ability.key]}}<span/>
+            </div>
+            <div class="small-4 column">
+              <span> {{character.abilityMods()[ability.key]}}<span/>
             </div>
           </div>
           <div class="row">
