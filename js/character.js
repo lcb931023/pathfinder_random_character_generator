@@ -20,31 +20,25 @@ angular.module('character', ['diceParser'])
     );
     function inArray(target, list)
     {
-        var inArray=false;
+        var ina=false;
         for(var i=0;i<list.length;i++)
         {
-            if(list[i]===target){inArray=true;}
+            if(list[i]===target){ina=true;}
         }
-        return inArray;
-    };
+        return ina;
+    }
 		// HELPER
     // Inclusive min, exclusive max
 		var randomInt = function(min, max){
 			return Math.floor(Math.random() * (max - min) ) + min;
 		};
+    var compareNumbers = function compareNumbers(a,b) {
+      return a - b;
+    };
 
     this.generate = function generate($http) {
 
       this.curLevel = Math.floor(Math.random() * 20 ) + 1;
-
-      // Placeholder Values
-      this.abilityScores = {};
-      this.abilityScores.str = diceParser.roll("3d6");
-      this.abilityScores.dex = diceParser.roll("3d6");
-      this.abilityScores.con = diceParser.roll("3d6");
-      this.abilityScores.int = diceParser.roll("3d6");
-      this.abilityScores.wis = diceParser.roll("3d6");
-      this.abilityScores.cha = diceParser.roll("3d6");
 
 
       // Data independent data
@@ -74,6 +68,36 @@ angular.module('character', ['diceParser'])
       this.shared = sharedJson;
 
       this.alignment = this.class.alignments[randomInt(0, this.class.alignments.length)];
+
+      // Abilities
+      var scores = [diceParser.roll("3d6"), diceParser.roll("3d6"), 
+                    diceParser.roll("3d6"), diceParser.roll("3d6"), 
+                    diceParser.roll("3d6"), diceParser.roll("3d6")];
+      scores = scores.sort(compareNumbers);
+
+      this.abilityScores = {};
+      this.abilityScores.str = -1;
+      this.abilityScores.dex = -1;
+      this.abilityScores.con = -1;
+      this.abilityScores.int = -1;
+      this.abilityScores.wis = -1;
+      this.abilityScores.cha = -1;
+
+      var archetype = this.class.archetypes_list[
+                      randomInt(0, this.class.archetypes_list.length)];   
+ 
+      //fill in the archetype specified ones first
+      for (key in this.class.archetypes[archetype])
+        this.abilityScores[
+            this.class.archetypes[archetype][key]] = scores.pop();
+
+      while (scores.length > 0)//get the remaining ones
+      {
+        var ability = this.shared.abilities[
+randomInt(0, this.shared.abilities.length)].key;
+        if (this.abilityScores[ability] == -1)
+          this.abilityScores[ability] = scores.pop();
+      }
 
       // [TODO] necessary refinements for skill?
       // [TODO] Feat

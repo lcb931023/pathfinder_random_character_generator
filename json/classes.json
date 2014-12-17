@@ -24,7 +24,10 @@
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "BAB":"high",
             "Stats": ["str","con","dex"],
-            "archetypes": ["standard"]
+            "archetypes_list": ["standard"],
+            "archetypes":{
+                    "standard": ["str", "con", "dex"]
+            }
         },
 
 
@@ -73,7 +76,12 @@
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "BAB": "medium",
             "Stats": ["cha", "dex", "con"],
-            "archetypes": ["standard", "melee", "archer"],
+            "archetypes_list": ["standard", "melee", "archer"],
+            "archetypes":{
+                    "standard": ["cha", "dex", "con"],
+                    "melee": ["cha", "str", "con"],
+                    "archer": ["cha", "dex", "str", "con"]
+            },
             "spellmod":"cha",
             "spellsperdayclass": [
                 ["1","0","0","0","0","0"],
@@ -154,29 +162,34 @@
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "BAB": "medium",
             "Stats": ["wis", "char", "con", "str"],
-            "archetypes": ["standard", "melee", "wiseMelee"],
+            "archetypes_list": ["standard", "melee", "wiseMelee"],
+            "archetypes":{
+                    "standard": ["wis", "cha", "con", "str"],
+                    "wiseMelee": ["wis", "str", "con"],
+                    "melee": ["str", "wis", "con"]
+            },
             "spellmod":"wis",
             "spellsperday": [
                 ["3","1+1","0","0","0","0","0","0","0","0"],
-				["4","2+1","0","0","0","0","0","0","0","0"],
-				["4","2+1","1+1","0","0","0","0","0","0","0"],
-				["4","3+1","2+1","0","0","0","0","0","0","0"],
-				["4","3+1","2+1","1+1","0","0","0","0","0","0"],
-				["4","3+1","3+1","2+1","0","0","0","0","0","0"],
-				["4","4+1","3+1","2+1","1+1","0","0","0","0","0"],
-				["4","4+1","3+1","3+1","2+1","0","0","0","0","0"],
-				["4","4+1","4+1","3+1","2+1","1+1","0","0","0","0"],
-				["4","4+1","4+1","3+1","3+1","2+1","0","0","0","0"],
-				["4","4+1","4+1","4+1","3+1","2+1","1+1","0","0","0"],
-				["4","4+1","4+1","4+1","3+1","3+1","2+1","0","0","0"],
-				["4","4+1","4+1","4+1","4+1","3+1","2+1","1+1","0","0"],
-				["4","4+1","4+1","4+1","4+1","3+1","3+1","2+1","0","0"],
-				["4","4+1","4+1","4+1","4+1","4+1","3+1","2+1","1+1","0"],
-				["4","4+1","4+1","4+1","4+1","4+1","3+1","3+1","2+1","0"],
-				["4","4+1","4+1","4+1","4+1","4+1","4+1","3+1","2+1","1+1"],
-				["4","4+1","4+1","4+1","4+1","4+1","4+1","3+1","3+1","2+1"],
-				["4","4+1","4+1","4+1","4+1","4+1","4+1","4+1","3+1","3+1"],
-				["4","4+1","4+1","4+1","4+1","4+1","4+1","4+1","4+1","4+1"]
+                ["4","2+1","0","0","0","0","0","0","0","0"],
+                ["4","2+1","1+1","0","0","0","0","0","0","0"],
+                ["4","3+1","2+1","0","0","0","0","0","0","0"],
+                ["4","3+1","2+1","1+1","0","0","0","0","0","0"],
+                ["4","3+1","3+1","2+1","0","0","0","0","0","0"],
+                ["4","4+1","3+1","2+1","1+1","0","0","0","0","0"],
+                ["4","4+1","3+1","3+1","2+1","0","0","0","0","0"],
+                ["4","4+1","4+1","3+1","2+1","1+1","0","0","0","0"],
+                ["4","4+1","4+1","3+1","3+1","2+1","0","0","0","0"],
+                ["4","4+1","4+1","4+1","3+1","2+1","1+1","0","0","0"],
+                ["4","4+1","4+1","4+1","3+1","3+1","2+1","0","0","0"],
+                ["4","4+1","4+1","4+1","4+1","3+1","2+1","1+1","0","0"],
+                ["4","4+1","4+1","4+1","4+1","3+1","3+1","2+1","0","0"],
+                ["4","4+1","4+1","4+1","4+1","4+1","3+1","2+1","1+1","0"],
+                ["4","4+1","4+1","4+1","4+1","4+1","3+1","3+1","2+1","0"],
+                ["4","4+1","4+1","4+1","4+1","4+1","4+1","3+1","2+1","1+1"],
+                ["4","4+1","4+1","4+1","4+1","4+1","4+1","3+1","3+1","2+1"],
+                ["4","4+1","4+1","4+1","4+1","4+1","4+1","4+1","3+1","3+1"],
+                ["4","4+1","4+1","4+1","4+1","4+1","4+1","4+1","4+1","4+1"]
             ]
         },
 
@@ -216,7 +229,11 @@
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "BAB": "medium",
             "Stats": ["wis", "str"],
-            "archetypes": ["dps", "tank"],
+            "archetypes_list": ["dps", "tank"],
+            "archetypes":{
+                    "dps": ["wis", "str"],
+                    "tank": ["wis", "con"]
+            },
             "spellmod":"wis",
             "spellsperday": [
                 ["3","1","0","0","0","0","0","0","0","0"],
@@ -263,7 +280,7 @@
                 "Knowledge(Engineering)",
                 "Profession",
                 "Ride",
-                "Survivial",
+                "Survival",
                 "Swim"
             ],
             "Hit": "d10",
@@ -277,7 +294,13 @@
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "BAB": "high",
             "Stats": ["str","con","dex"],
-            "archetypes": ["melee", "tank", "fastMelee", "archer"]
+            "archetypes_list": ["melee", "tank", "fastMelee", "archer"],
+            "archetypes":{
+                    "melee": ["str", "con", "dex"],
+                    "tank": ["con", "str", "dex"],
+                    "fastMelee": ["str", "dex", "con"],
+                    "archer": ["dex", "str", "con"]
+            }
         },
 
 
@@ -316,7 +339,12 @@
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "BAB": "medium",
             "Stats": ["str", "wis", "dex", "con"],
-            "archetypes": ["standard", "stunning", "fast"]
+            "archetypes_list": ["standard", "stunning", "fast"],
+            "archetypes":{
+                    "standard": ["str", "wis", "dex", "con"],
+                    "stunning": ["wis", "str", "dex", "con"],
+                    "fast": ["wis", "dex", "con"]
+            }
         },
 
 
@@ -354,7 +382,12 @@
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "BAB": "high",
             "Stats": ["str", "cha", "con"],
-            "archetypes": ["standard", "tank", "archer"],
+            "archetypes_list": ["standard", "tank", "archer"],
+            "archetypes":{
+                    "standard": ["str", "cha", "con"],
+                    "tank": ["str", "con", "cha"],
+                    "archer": ["dex", "str", "cha"]
+            },
             "spellmod":"cha",
             "spellsperday": [
                 ["0","0","0","0"],
@@ -419,7 +452,13 @@
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "BAB": "high",
             "Stats": ["str", "dex", "con"],
-            "archetypes": ["melee", "tank", "fastMelee", "archer"],
+            "archetypes_list": ["melee", "tank", "fastMelee", "archer"],
+            "archetypes":{
+                    "melee": ["str", "con", "dex"],
+                    "tank": ["con", "str", "dex"],
+                    "fastMelee": ["str", "dex", "con"],
+                    "archer": ["dex", "str", "con"]
+            },
             "spellmod":"wis",
             "spellsperday": [
                 ["0","0","0","0"],
@@ -494,7 +533,11 @@
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "BAB": "medium",
             "Stats": ["dex", "str", "con"],
-            "archetypes": ["standard", "face"]
+            "archetypes": ["standard", "face"],
+            "archetypes":{
+                    "standard": ["dex", "str", "con"],
+                    "face": ["cha", "dex", "str", "con"]
+            }
         },
 
 
@@ -531,7 +574,12 @@
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "BAB": "low",
             "Stats": ["cha", "dex", "con"],
-            "archetypes": ["fast", "tough", "melee"],
+            "archetypes_list": ["fast", "tough", "melee"],
+            "archetypes":{
+                    "fast": ["cha", "dex", "con"],
+                    "tough": ["cha", "con", "dex"],
+                    "melee": ["cha", "str", "con"]
+            },
             "spellmod": "cha",
             "spellsperday": [
                 ["3","0","0","0","0","0","0","0","0"],
@@ -616,7 +664,12 @@
             "willsaves": [2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12],
             "BAB": "low",
             "Stats": ["int", "dex", "con"],
-            "archetypes": ["fast", "tough"],
+            "archetypes_list": ["fast", "tough"],
+            "archetypes":{
+                    "class": "Wizard",
+                    "fast": ["int", "dex", "con"],
+                    "tough": ["int", "con", "dex"]
+            },
             "spellmod": "int",
             "spellsperday": [
                 ["3","1","0","0","0","0","0","0","0","0"],
@@ -640,28 +693,28 @@
                 ["4","4","4","4","4","4","4","4","3","3"],
                 ["4","4","4","4","4","4","4","4","4","4"]
             ],
-			"spellsknown": [
-				["All Wizard level 0 spells + 3 first level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 2 of any 1st or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 4 of  2nd or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 6 of any 2nd or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 8 of any 3rd or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 10 of any 3rd or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 12 of any 4th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 14 of any 4th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 16 of any 5th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 18 of any 5th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 20 of any 6th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 22 of any 6th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 24 of any 7th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 26 of any 7th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 28 of any 8th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 30 of any 8th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 32 of any 9th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 34 of any 9th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 36 of any 9th or below level spells"],
-				["All Wizard level 0 spells + 3 first level spells + 38 of any 9th or below level spells"]
-			]
+            "spellsknown": [
+                ["All Wizard level 0 spells + 3 first level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 2 of any 1st or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 4 of  2nd or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 6 of any 2nd or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 8 of any 3rd or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 10 of any 3rd or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 12 of any 4th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 14 of any 4th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 16 of any 5th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 18 of any 5th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 20 of any 6th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 22 of any 6th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 24 of any 7th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 26 of any 7th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 28 of any 8th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 30 of any 8th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 32 of any 9th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 34 of any 9th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 36 of any 9th or below level spells"],
+                ["All Wizard level 0 spells + 3 first level spells + 38 of any 9th or below level spells"]
+            ]
         }
     ]
 }
