@@ -533,7 +533,7 @@
             "willsaves": [0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6],
             "BAB": "medium",
             "Stats": ["dex", "str", "con"],
-            "archetypes": ["standard", "face"],
+            "archetypes_list": ["standard", "face"],
             "archetypes":{
                     "standard": ["dex", "str", "con"],
                     "face": ["cha", "dex", "str", "con"]
