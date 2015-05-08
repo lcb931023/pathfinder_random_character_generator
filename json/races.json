@@ -32,6 +32,9 @@
         "femalemod": "+2d8*7"
     },
 
+    "hair":["human"],
+    "eyes":["human"],
+
     "ability":[{"con":2}, {"wis":2}, {"cha":-2}],
     "size": "Medium",
     "type": "Humanoid (dwarf)",
@@ -254,6 +257,9 @@
         "femalemod": "+2d6*3"
     },
 
+    "hair":["human"],
+    "eyes":["human", "elf"],
+
     "ability":[{"dex":2}, {"int":2}, {"con":-2}],
     "size": "Medium",
     "type": "Humanoid (elf)",
@@ -434,6 +440,9 @@
         "femalebase": 30,
         "femalemod": "+2d4"
     },
+
+    "hair":["human"],
+    "eyes":["human"],
 
     "ability":[{"con":2}, {"cha":2}, {"str":-2}],
     "size": "Small",
@@ -629,6 +638,9 @@
         "femalemod": "+2d8*5"
     },
 
+    "hair":["human"],
+    "eyes":["human", "human", "elf"],
+
     "ability":[{"any":2}],
     "size": "Medium",
     "type": "Humanoid (human, elf)",
@@ -817,6 +829,9 @@
         "femalemod": "+2d4"
     },
 
+    "hair":["human"],
+    "eyes":["human"],
+
     "ability":[{"dex":2}, {"cha":2}, {"str":-2}],
     "size": "Small",
     "type": "Humanoid (halfling)",
@@ -1001,6 +1016,9 @@
         "femalebase": 110,
         "femalemod": "+2d12*7"
     },
+
+    "hair":["human"],
+    "eyes":["human"],
 
     "ability":[{"any":2}],
     "size": "Medium",
@@ -1243,6 +1261,9 @@
         "femalebase": 85,
         "femalemod": "+2d10*5"
     },
+
+    "hair":["human"],
+    "eyes":["human"],
 
     "ability":[{"any":2}],
     "size": "Medium",

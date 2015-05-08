@@ -36,6 +36,15 @@ angular.module('character', ['diceParser'])
       return a - b;
     };
 
+
+    function weightedRandom(list, weights) {
+      var random_num = randomInt(0, weights[list.length-1]);
+      for (var i = 0; i < list.length; i++) {
+        if (random_num <= weights[i])
+          return list[i];
+      }
+      return -1;
+    }
     this.generate = function generate($http) {
 
       this.curLevel = Math.floor(Math.random() * 20 ) + 1;
@@ -44,8 +53,12 @@ angular.module('character', ['diceParser'])
       // Data independent data
       this.gender = (Math.random() > 0.5) ? "male" : "female";
 
-      // From Races
+      //save json
+      this.shared = sharedJson;
       this.races = raceJson.races;
+      this.classes = classJson.Classes;
+
+      // From Races
       this.race = raceJson.races[randomInt(0, raceJson.races.length)];
       this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
       this.height = this.race.height[this.gender + "base"] +
@@ -64,10 +77,41 @@ angular.module('character', ['diceParser'])
         this.ability_racialMods[tKey] = pAbility[i][tKey];
       }
 
+      var templist = [];
+      var weights = [];
+      for (var i in this.race.hair)
+      {
+        var list = this.shared.hair_colors[this.race.hair[i]];
+        for (var index in list)
+        {
+          templist.push(list[index]);
+          if (weights.length==0)
+            weights.push(list[index].chance);
+          else
+            weights.push(list[index].chance + weights[weights.length - 1]);
+        }
+      }
+      this.hair = weightedRandom(templist, weights);
+
+      templist = [];
+      weights = [];
+      for (var i in this.race.eyes)
+      {
+        var list = this.shared.eye_colors[this.race.eyes[i]];
+        for (var index in list)
+        {
+          templist.push(list[index]);
+          if (weights.length==0)
+            weights.push(list[index].chance);
+            else
+              weights.push(list[index].chance + weights[weights.length - 1]);
+        }
+      }
+      this.eyes = weightedRandom(templist, weights);
+
+
       // From Classes
-      this.classes = classJson.Classes;
       this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
-      this.shared = sharedJson;
 
       this.alignment = this.class.alignments[randomInt(0, this.class.alignments.length)];
 
