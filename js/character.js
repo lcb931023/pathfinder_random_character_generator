@@ -70,8 +70,8 @@ angular.module('character', ['diceParser'])
       this.alignment = this.class.alignments[randomInt(0, this.class.alignments.length)];
 
       // Abilities
-      var scores = [diceParser.roll("3d6"), diceParser.roll("3d6"), 
-                    diceParser.roll("3d6"), diceParser.roll("3d6"), 
+      var scores = [diceParser.roll("3d6"), diceParser.roll("3d6"),
+                    diceParser.roll("3d6"), diceParser.roll("3d6"),
                     diceParser.roll("3d6"), diceParser.roll("3d6")];
       scores = scores.sort(compareNumbers);
 
@@ -84,8 +84,8 @@ angular.module('character', ['diceParser'])
       this.abilityScores.cha = -1;
 
       var archetype = this.class.archetypes_list[
-                      randomInt(0, this.class.archetypes_list.length)];   
- 
+                      randomInt(0, this.class.archetypes_list.length)];
+
       //fill in the archetype specified ones first
       for (key in this.class.archetypes[archetype])
         this.abilityScores[
@@ -130,15 +130,15 @@ randomInt(0, this.shared.abilities.length)].key;
     };
     this.abilityMods = function abilityMods() {
       return {"str": Math.floor((this.abilityScores.str+
-                            this.ability_racialMods.str-10)/2), 
+                            this.ability_racialMods.str-10)/2),
               "dex": Math.floor((this.abilityScores.dex+
-                            this.ability_racialMods.dex-10)/2), 
+                            this.ability_racialMods.dex-10)/2),
               "con": Math.floor((this.abilityScores.con+
-                            this.ability_racialMods.con-10)/2), 
+                            this.ability_racialMods.con-10)/2),
               "int": Math.floor((this.abilityScores.int+
-                            this.ability_racialMods.int-10)/2), 
+                            this.ability_racialMods.int-10)/2),
               "wis": Math.floor((this.abilityScores.wis+
-                            this.ability_racialMods.wis-10)/2), 
+                            this.ability_racialMods.wis-10)/2),
               "cha": Math.floor((this.abilityScores.cha+
                             this.ability_racialMods.cha-10)/2)};
       console.log()
@@ -185,7 +185,9 @@ randomInt(0, this.shared.abilities.length)].key;
           tLevel.hp = $scope.character.levels[i-1].hp +
                       diceParser.roll("1"+this.class.Hit);
         }
-
+        //ac
+        tLevel.ac = 10 + this.abilityMods().dex
+                       + this.shared.size_modifiers[this.race.size];
         //todo: feats and traits granted by class per level
 
         $scope.character.levels.push(tLevel);
@@ -221,6 +223,7 @@ randomInt(0, this.shared.abilities.length)].key;
       $scope.character.skillranks_max = $scope.character.levels[iLevel].skillranks_max;
 
       $scope.character.hp = $scope.character.levels[iLevel].hp;
+      $scope.character.ac = $scope.character.levels[iLevel].ac;
 
       // Ability scores and the related
       $scope.character.abilitypoints_used = $scope.character.levels[iLevel].abilitypoints_used;
