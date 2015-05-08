@@ -115,6 +115,8 @@ angular.module('character', ['diceParser'])
 
       this.alignment = this.class.alignments[randomInt(0, this.class.alignments.length)];
 
+      this.wealth = diceParser.roll(this.class.startingwealth);
+
       // Abilities
       var scores = [diceParser.roll("3d6"), diceParser.roll("3d6"),
                     diceParser.roll("3d6"), diceParser.roll("3d6"),

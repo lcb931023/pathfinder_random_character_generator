@@ -91,6 +91,11 @@
               <input type="text" ng-model="character.eyes.name"/>
             </label>
           </div>
+          <div class="small-3 medium-2 columns">
+            <label> Gold Pieces
+              <input type="number" ng-model="character.wealth"/>
+            </label>
+          </div>
           <div class="small-6 medium-3 columns">
             <label> Alignment
               <select ng-model="character.alignment" ng-options="alignment for alignment in character.class.alignments">
