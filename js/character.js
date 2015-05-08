@@ -45,6 +45,7 @@ angular.module('character', ['diceParser'])
       this.gender = (Math.random() > 0.5) ? "male" : "female";
 
       // From Races
+      this.races = raceJson.races;
       this.race = raceJson.races[randomInt(0, raceJson.races.length)];
       this.name = this.race.names[this.gender][randomInt(0, this.race.names[this.gender].length)];
       this.height = this.race.height[this.gender + "base"] +
@@ -64,6 +65,7 @@ angular.module('character', ['diceParser'])
       }
 
       // From Classes
+      this.classes = classJson.Classes;
       this.class = classJson.Classes[randomInt(0, classJson.Classes.length)];
       this.shared = sharedJson;
 

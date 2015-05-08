@@ -35,47 +35,53 @@
       <div id="char-info" class="row">
         <fieldset>
           <legend>Character Info</legend>
-          <div class="small-6 medium-3 columns">
+          <div class="small-6 medium-4 columns">
             <label> Name
               <input type="text" ng-model="character.name"/>
             </label>
           </div>
-                    <div class="small-6 medium-3 columns">
+          <div class="small-6 medium-2 columns">
             <label> Gender
               <input type="text" ng-model="character.gender"/>
             </label>
           </div>
           <div class="small-6 medium-3 columns">
             <label> Race
-              <input type="text" id="data-race" ng-model="character.race.name"/>
+              <select id="data-race" ng-model="character.race"
+                      ng-options="race.name for race in character.races">
+
+              </select>
             </label>
           </div>
           <div class="small-6 medium-3 columns">
             <label> Class
-              <input type="text" id="data-class" ng-model="character.class.name"/>
+              <select id="data-class" ng-model="character.class"
+                      ng-options="class.name for class in character.classes">
+
+              </select>
             </label>
           </div>
-                    <div class="small-2 columns">
+          <div class="small-4 medium-2 columns">
             <label> Age
               <input type="number" ng-model="character.race.age.adulthood"/>
             </label>
           </div>
-                    <div class="small-6 columns">
+          <div class="small-8 medium-6 columns">
             <label> Size
               <input type="text" ng-model="character.race.size + ' ' + character.race.type"/>
             </label>
           </div>
-                    <div class="small-2 columns">
+          <div class="small-3 medium-2 columns">
             <label> Height
               <input type="text" ng-model="character.height"/>
             </label>
           </div>
-                    <div class="small-2 columns">
+          <div class="small-3 medium-2 columns">
             <label> Weight
               <input type="text" ng-model="character.weight"/>
             </label>
           </div>
-          <div class="small-4 columns">
+          <div class="small-6 medium-3 columns">
             <label> Alignment
               <select ng-model="character.alignment" ng-options="alignment for alignment in character.class.alignments">
 
@@ -88,34 +94,36 @@
       <div id="attributes" class="row">
         <fieldset>
           <legend>Attributes</legend>
-          <div class="small-2 columns">
+          <div class="small-4 medium-2 columns">
             <label> Level
               <input type="number" ng-model="character.curLevel" ng-change="character.updateCharacterFromLevels()" min="1" max="20"/>
             </label>
           </div>
-          <div class="small-2 columns">
+          <div class="small-4 medium-2 columns">
             <label> Hit Point
               <input type="number" ng-model="character.hp"/>
             </label>
           </div>
-          <div class="small-2 columns">
+          <div class="small-4 medium-2 columns">
             <label> Hit Die
               <input type="text" ng-model="character.class.Hit"/>
             </label>
           </div>
-          <div class="small-3 columns">
+          <div class="small-5 medium-3 columns">
             <label> Armor Class
               <input type="number" ng-model="character.ac"/>
             </label>
           </div>
-                    <div class="small-3 columns">
+          <div class="small-4 medium-2 columns">
             <label> Speed
               <input type="text" ng-model="character.race.speed"/>
             </label>
           </div>
 
-          <legend>Ability Scores</legend>
           <div class="row">
+            <div class="small-12 columns">
+              <legend>Ability Scores</legend>
+            </div>
             <div class="small-3 columns">
               <label class="inline">Name</label>
             </div>
@@ -145,22 +153,22 @@
             </div>
           </div>
           <div class="row">
-            <div class="small-2 columns">
+            <div class="small-5 medium-3 columns">
               <label> Fortitude Saves
                 <input type="number" ng-model="character.fortsaves"/>
               </label>
             </div>
-            <div class="small-2 columns">
+            <div class="small-4 medium-2 columns">
               <label> Reflex Saves
                 <input type="number" ng-model="character.refsaves"/>
               </label>
             </div>
-            <div class="small-2 columns">
+            <div class="small-4 medium-2 columns">
               <label> Will Saves
                 <input type="number" ng-model="character.willsaves"/>
               </label>
             </div>
-            <div class="small-6 columns">
+            <div class="small-7 medium-5 columns">
               <label> BAB
                 <input type="text" ng-model="character.BAB"/>
               </label>
@@ -184,10 +192,10 @@
             <div id="skills" class="row">
                 <fieldset>
                   <legend>Skills</legend>
-                    <span ng-repeat="skill in character.shared.skills" class="small-4 columns">
+                    <span ng-repeat="skill in character.shared.skills" class="small-12 medium-6 large-4 columns">
                         <input type="checkbox" ng-model="character.classSkills[skill.name]">{{skill.name}}: {{character.skillRanks[skill.name]}}
                         <button class="tiny" ng-click="character.skill_up(skill.name)" ng-show="((character.skillRanks_total - character.skillRanks_used && character.classSkills[skill.name]) || character.skillRanks_total-character.skillRanks_used > 1) && character.skillRanks[skill.name]<character.skillranks_max">Add</button></span>
-                    <span class="small-4 columns">Available Points: {{character.skillRanks_total - character.skillRanks_used}}</span>
+                    <span class="small-12 medium-6 large-4 columns">Available Points: {{character.skillRanks_total - character.skillRanks_used}}</span>
                 </fieldset>
             </div>
             <div id="feats" class="row">
